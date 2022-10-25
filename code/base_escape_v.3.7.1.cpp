@@ -4799,7 +4799,7 @@ void endgame() {
 		system("pause");
 		system("cls");
 	}
-	if (nmoves < 275) {
+	if (nmoves < 275 && !achievements5) {
 		if (Language)
 			cout << "===========================================\n          Achievement earned:\n             Speedrunner\n  Complete the game in less than 275 moves\n===========================================" << endl;
 		if (!Language)
@@ -4808,7 +4808,7 @@ void endgame() {
 		system("pause");
 		system("cls");
 	}
-	if (nmoves > 325) {
+	if (nmoves > 325 && !achievements4) {
 		if (Language)
 			cout << "===========================================\n          Achievement earned:\n        Look under every stone...\n Complete the game in more than 325 moves\n===========================================" << endl;
 		if (!Language)
@@ -4817,7 +4817,7 @@ void endgame() {
 		system("pause");
 		system("cls");
 	}
-	if (nsave == 0) {
+	if (nsave == 0 && !achievements3) {
 		if (Language)
 			cout << "===========================================\n          Achievement earned:\n         Save is for the weak!\n    Complete the game without saving\n===========================================" << endl;
 		if (!Language)
@@ -4826,7 +4826,7 @@ void endgame() {
 		system("pause");
 		system("cls");
 	}
-	if (ndeath == 0) {
+	if (ndeath == 0 && !achievements2) {
 		if (Language)
 			cout << "===========================================\n          Achievement earned:\n       Guided by the right path...\n    Complete the game without dying\n===========================================" << endl;
 		if (!Language)
@@ -4835,7 +4835,7 @@ void endgame() {
 		system("pause");
 		system("cls");
 	}
-	if (nsave == 5) {
+	if (nsave == 5 && !achievements1) {
 		if (Language)
 			cout << "===========================================\n          Achievement earned:\n                Coward!\n             Save 5 times\n===========================================" << endl;
 		if (!Language)
@@ -4844,7 +4844,7 @@ void endgame() {
 		system("pause");
 		system("cls");
 	}
-	if (somebody) {
+	if (somebody && !achievements6) {
 		if (Language)
 			cout << "===========================================\n          Achievement earned:\n         Somebody once told me...\n              Meet Shrek\n===========================================" << endl;
 		if (!Language)
@@ -4853,7 +4853,7 @@ void endgame() {
 		system("pause");
 		system("cls");
 	}
-	if (isHasAmongus) {
+	if (isHasAmongus && !achievements7) {
 		if (Language)
 			cout << "===========================================\n          Achievement earned:\n                 AMOGUS\n              Find AMOGUS\n===========================================" << endl;
 		if (!Language)
@@ -4862,7 +4862,7 @@ void endgame() {
 		system("pause");
 		system("cls");
 	}
-	if (gas_gas_gas) {
+	if (gas_gas_gas && !achievements8) {
 		if (Language)
 			cout << "===========================================\n          Achievement earned:\n              Too stuffy\n          Die from poisoning\n===========================================" << endl;
 		if (!Language)
@@ -4871,7 +4871,7 @@ void endgame() {
 		system("pause");
 		system("cls");
 	}
-	if (sans) {
+	if (sans && !achievements9) {
 		if (Language)
 			cout << "===========================================\n          Achievement earned:\n    I'm not fat. I'm just big boned!\n  Don't find the skeleton under the bed\n===========================================" << endl;
 		if (!Language)
@@ -4880,7 +4880,7 @@ void endgame() {
 		system("pause");
 		system("cls");
 	}
-	if (qhelp == 24) {
+	if (qhelp == 24 && !achievements10) {
 		if (Language)
 			cout << "===========================================\n          Achievement earned:\n             Great dumbass\n             Use 24 hints\n===========================================" << endl;
 		if (!Language)
@@ -4978,14 +4978,14 @@ void main_menu() {
 	system("cls");
 	rnd = rand() % 100;
 	if (Language) {
-		cout << "=================base_escape_v3.7=================" << endl << endl;
-		cout << "Welcome to my updated version of base_escape_v3.7\n==================================================\n                       Start 1\n                     Load save 2\n                About the developers 3\n                  Русский/English 4\n              =========================\n                    Changes list 5\n                    Achievements 6\n              =========================\n                  Delete game data 7\n                       Exit 0\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n" << endl;
+		cout << "=================base_escape_v3.7.1=================" << endl << endl;
+		cout << "Welcome to my updated version of base_escape_v3.7.1\n====================================================\n                       Start 1\n                     Load save 2\n                About the developers 3\n                  Русский/English 4\n              =========================\n                    Changes list 5\n                    Achievements 6\n              =========================\n                  Delete game data 7\n                       Exit 0\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n" << endl;
 		if (rnd == 4)
 			cout << "Cheat: 6 -> 3 -> 7 -> 5 -> 1/2";
 	}
 	if (!Language) {
-		cout << "======================base_escape_v3.7======================" << endl << endl;
-		cout << " Добро пожаловать в мою обновлённую версию base_escape_v3.7\n============================================================\n                           Старт 1\n                   Загрузить сохранение 2\n                      О Разработчиках 3\n                      Русский/English 4\n              ==================================\n                      Список изменений 5\n                         Достижения 6\n              ==================================\n                   Удалить игровые данные 7\n                           Выйти 0\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n" << endl;
+		cout << "======================base_escape_v3.7.1======================" << endl << endl;
+		cout << " Добро пожаловать в мою обновлённую версию base_escape_v3.7.1\n==============================================================\n                           Старт 1\n                   Загрузить сохранение 2\n                      О Разработчиках 3\n                      Русский/English 4\n              ==================================\n                      Список изменений 5\n                         Достижения 6\n              ==================================\n                   Удалить игровые данные 7\n                           Выйти 0\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n" << endl;
 		if (rnd == 4)
 			cout << "Чит: 6 -> 3 -> 7 -> 5 -> 1/2";
 	}
