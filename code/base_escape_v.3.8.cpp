@@ -9,7 +9,7 @@ using namespace std;
 
 //основные настройки и достижения
 
-int ndeath = 0, nsave = 0, nmoves = 0, timr = 45; float x_pl = 0, infection_stage = 0, nhelp = 0, qhelp = 0, cheat = 0, rnd = rand() % 100, code = 0;
+int ndeath = 0, nsave = 0, nmoves = 0, timr = 45; float x_pl = 0, infection_stage = 0, nhelp = 0, qhelp = 0, cheat = 0, rnd = 0, code = 0, end_code = 999 + rand() % 10000, travel_code;
 bool achievements1 = false, achievements2 = false, achievements3 = false, achievements4 = false, achievements5 = false, achievements6 = false, achievements7 = false, achievements8 = false, achievements9 = false, achievements10 = false, somebody = false, gas_gas_gas = false, sans = false;
 bool Language = true, first_start = true, good_ending = false, firw = true, git = true, comp = false, bag_com = false;
 char qsave[] = { "ffffffffff" };
@@ -25,7 +25,7 @@ bool isHasKey3 = false, bedroomOpen = false, isHasBooks = false, isHasFirecracke
 bool escpe = false, gameover = false, first_run = true;
 bool look_around = false, isHasTrap = false, loop = false, first = true, firhut = true, firroo = true, meat_open = false, isHasAxe = false, isHasBrick = false, lamp = false, oil = false, lamp_oil = false, house1_com = false, house2_com = false, house3_com = false, house4_com = false, church_open = false;
 bool isHasKey4 = false, im_gay = true, isHasMeat = false, i_love_furry = true, isHasMask = false, poison = false, gig = false, god = true, ryr = false, dog_die = false, home_open = false, fit = true, fir = true, fig = false, fig2 = false, fig3 = true, fit1 = true, fit2 = true, chg = false, T_virus = true, catag = true, tigr = true, tipr = false, typ = false;
-string wind, shd, dor, house1, house2, house3, meat, haha, stage, door1, door2, meat_op, dach1, dach2, dach, cruch, cab, caret;
+string wind, shd, dor, house1, house2, house3, meat, haha, stage, door1, door2, meat_op, dach1, dach2, dach, cruch, cab, caret, im_furry_gay;
 //инвентарь часть 6
 bool isHasKey5 = false;
 
@@ -111,6 +111,7 @@ void developer();
 void updet_list();
 void achievements();
 void delte();
+void trave1_code();
 void soc_netw();
 void save(int s);
 
@@ -150,7 +151,7 @@ int main() {
 		cout << "IIIIII  NN  NN\n  II    NNN NN\n  II    NN NNN\n  II    NN  NN\nIIIIII  NN  NN" << endl << endl;
 		cout << "BBBBB    AAAA    SSSS   EEEEE\nBB  BB  AA  AA  SS      EE\nBBBBB   AAAAAA   SSSS   EEEE\nBB  BB  AA  AA      SS  EE\nBBBBB   AA  AA   SSSS   EEEEE" << endl << endl;
 		cout << "EEEEE   SSSS    CCCC    AAAA   PPPPP   EEEEE\nEE     SS      CC  CC  AA  AA  PP  PP  EE\nEEEE    SSSS   CC      AAAAAA  PPPPP   EEEE\nEE         SS  CC  CC  AA  AA  PP      EE\nEEEEE   SSSS    CCCC   AA  AA  PP      EEEEE" << endl << endl;
-		cout << " 3333       777777\n3   33      77  77\n  333          77\n3   33        77\n 3333   **   77" << endl;
+		cout << " 3333        8888\n3   33      88  88\n  333        8888\n3   33      88  88\n 3333   **   8888" << endl;
 		system("pause");
 	}
 	main_menu();
@@ -242,6 +243,8 @@ void save() {
 	string sae;
 	ifstream file("C:/Windows/Temp/save.txt");
 	if (!file.is_open()) {
+		cout << "LOADING SAVE..." << endl << endl;
+		Sleep(1000);
 		cout << "SAVE FILE MISSING!" << endl;
 		system("pause");
 		start();
@@ -260,6 +263,7 @@ void save() {
 		file.close();
 		if (sae == "lx55GZ6dG6eJBl2oh6S0vtXVS3|MsS") {
 			cout << "LOADING SAVE..." << endl << endl;
+			Sleep(1000);
 			cout << "SAVE LOADED SUCCESSFULLY" << endl << endl;
 			nsave = 1;
 			nmoves = 14;
@@ -269,6 +273,7 @@ void save() {
 		}
 		if (sae == "4Aw@87CkOwnuQ{a3e*7E0K?aLN3UDL?GcgR") {
 			cout << "LOADING SAVE..." << endl << endl;
+			Sleep(1000);
 			cout << "SAVE LOADED SUCCESSFULLY" << endl << endl;
 			nsave = 2;
 			nmoves = 28;
@@ -277,6 +282,7 @@ void save() {
 		}
 		if (sae == "owMPYNv@oy%Yf}g6WGSd2cpiS#k7|1YAqEs") {
 			cout << "LOADING SAVE..." << endl << endl;
+			Sleep(1000);
 			cout << "SAVE LOADED SUCCESSFULLY" << endl << endl;
 			nsave = 3;
 			nmoves = 42;
@@ -285,6 +291,7 @@ void save() {
 		}
 		if (sae == "#6Jrw8Rq5m{Hdxv2O6G{lkwA6T9DenpwOTh") {
 			cout << "LOADING SAVE..." << endl << endl;
+			Sleep(1000);
 			cout << "SAVE LOADED SUCCESSFULLY" << endl << endl;
 			nsave = 4;
 			nmoves = 56;
@@ -293,6 +300,7 @@ void save() {
 		}
 		if (sae == "Fdcj*G2@~L~?j4Wb5NHw9$oG8lljs~") {
 			cout << "LOADING SAVE..." << endl << endl;
+			Sleep(1000);
 			cout << "SAVE LOADED SUCCESSFULLY" << endl << endl;
 			nsave = 5;
 			nmoves = 56;
@@ -302,6 +310,7 @@ void save() {
 		}
 		if (sae == "H5$4N84@fgQ}Pndu0E8}jmWfp{wO4YMcLWd") {
 			cout << "LOADING SAVE..." << endl << endl;
+			Sleep(1000);
 			cout << "SAVE LOADED SUCCESSFULLY" << endl << endl;
 			nsave = 6;
 			nmoves = 150;
@@ -310,6 +319,7 @@ void save() {
 		}
 		if (sae == "gc7k|DxbY~E#g~YW~S*7?aYE#TcYY0") {
 			cout << "LOADING SAVE..." << endl << endl;
+			Sleep(1000);
 			cout << "SAVE LOADED SUCCESSFULLY" << endl << endl;
 			nsave = 7;
 			nmoves = 175;
@@ -319,6 +329,7 @@ void save() {
 		}
 		if (sae == "hTao5on4gxvfe@N?yBHiUIR%s?WrUL") {
 			cout << "LOADING SAVE..." << endl << endl;
+			Sleep(1000);
 			cout << "SAVE LOADED SUCCESSFULLY" << endl << endl;
 			nsave = 8;
 			nmoves = 200;
@@ -328,6 +339,7 @@ void save() {
 		}
 		if (sae == "Ss9Hl9V7IR2KwlihlEYCa{}cHj~Eo~") {
 			cout << "LOADING SAVE..." << endl << endl;
+			Sleep(1000);
 			cout << "SAVE LOADED SUCCESSFULLY" << endl << endl;
 			nsave = 9;
 			nmoves = 225;
@@ -337,6 +349,7 @@ void save() {
 		}
 		if (sae == "ABtY{~U48s6tMhxHPvYd?GkV@y#W~v") {
 			cout << "LOADING SAVE..." << endl << endl;
+			Sleep(1000);
 			cout << "SAVE LOADED SUCCESSFULLY" << endl << endl;
 			nsave = 10;
 			nmoves = 250;
@@ -346,6 +359,7 @@ void save() {
 		}
 		if (sae == "5mB3vGgpi|gT~pn2zPiwW?L8@57kZJ72wU6") {
 			cout << "LOADING SAVE..." << endl << endl;
+			Sleep(1000);
 			cout << "SAVE LOADED SUCCESSFULLY" << endl << endl;
 			nsave = 666;
 			nmoves = 280;
@@ -761,7 +775,7 @@ void window() {
 		cycle1();
 	}
 }
-//шкаф 
+//шкаф
 void close(int cl) {
 	system("cls");
 	if (cl == 1) {
@@ -3923,7 +3937,7 @@ void dacha() {
 		break;
 	}
 }
-//беседка 
+//беседка
 void pavilion() {
 	system("cls");
 	if (Language)
@@ -3954,7 +3968,7 @@ void pavilion() {
 		break;
 	}
 }
-//поленница 
+//поленница
 void warehouse() {
 	system("cls");
 	if (isHasBrick || house3_com) {
@@ -3973,7 +3987,7 @@ void warehouse() {
 	system("pause");
 	dacha();
 }
-//дом дачи 
+//дом дачи
 void home() {
 	system("cls");
 	if (!fir) {
@@ -4223,7 +4237,7 @@ void cottage() {
 		break;
 	}
 }
-//мастерская коттеджа 
+//мастерская коттеджа
 void cot_workshop() {
 	system("cls");
 	if (typ) {
@@ -4328,7 +4342,7 @@ void cot_workshop() {
 		cot_workshop();
 	}
 }
-//ванна коттеджа 
+//ванна коттеджа
 void cot_cabinet() {
 	system("cls");
 	if (Language)
@@ -4354,7 +4368,7 @@ void cot_cabinet() {
 		break;
 	}
 }
-//второй этаж коттеджа 
+//второй этаж коттеджа
 void floor_2() {
 	system("cls");
 	if (!fit2) {
@@ -4493,7 +4507,7 @@ void church() {
 		break;
 	}
 }
-//катакомбы 
+//катакомбы
 void catacombs() {
 	system("cls");
 	cout << cruch << endl;
@@ -4641,7 +4655,7 @@ void deep_catacombs() {
 		break;
 	}
 }
-//комната с книжкой 
+//комната с книжкой
 void deep_room1() {
 	system("cls");
 	if (Language)
@@ -4741,9 +4755,6 @@ void deep_room4() {
 	system("pause");
 	deep_catacombs();
 }
-
-//меню и прочее
-// 
 //конец игры
 void endgame() {
 	system("cls");
@@ -4914,16 +4925,24 @@ void endgame() {
 		achievements << qsave;
 		achievements.close();
 	}
-	if (Language)
+	end_code = 999 + rand() % 10000;
+	if (Language) {
 		cout << "During this journey you died " << ndeath << " times" << endl << endl;
-	if (!Language)
-		cout << "Во время этого путешествия вы умерли " << ndeath << " раз" << endl << endl;
+		cout << "Your traveler code: “" << end_code << "”" << endl << endl;
+	}
+	if (!Language) {
+		cout << "Во время этого путешествия вы умерли " << ndeath << " раз" << endl;
+		cout << "Ваш код путешественника: “" << end_code << "”" << endl << endl;
+	}
 	cout << endl << endl << "TTTTTT  HH  HH   AAAA   NN  NN  KK  KK   SSSS  \n  TT    HH  HH  AA  AA  NNN NN  KK KK   SS     \n  TT    HHHHHH  AAAAAA  NN NNN  KKKK     SSSS  \n  TT    HH  HH  AA  AA  NN  NN  KK KK       SS \n  TT    HH  HH  AA  AA  NN  NN  KK  KK   SSSS  " << endl << endl;
 	cout << "FFFFFF   OOOO   RRRRR     PPPPP   LL       AAAA   YY  YY  IIIIII  NN  NN   GGGG   !!!\nFF      OO  OO  RR  RR    PP  PP  LL      AA  AA   YYYY     II    NNN NN  GG      !!!\nFFFF    OO  OO  RRRRR     PPPPP   LL      AAAAAA    YY      II    NN NNN  GG GGG  !!!\nFF      OO  OO  RR  RR    PP      LL      AA  AA    YY      II    NN  NN  GG  GG\nFF       OOOO   RR  RR    PP      LLLLLL  AA  AA    YY    IIIIII  NN  NN   GGGG   !!!" << endl;
 	system("pause");
 	ndeath = 0, nsave = 0, nmoves = 0, timr = 45; x_pl = 0, infection_stage = 0, firw = true, to_yard = false, to_basement = false, door_close = true, git = true, bag_com = false, comp = false, isHasKnife = false, isHasKey1 = false, figt = true, isHasHammer = false, isHasValve = false, isHasPotatoes = false, pig_eat = false, windows_broke = false, isHasCrowbar = false, isHasMaul = false, isHasExplosives = false, isHasKey2 = false, isHasPlanks = false, isHasKey3 = false, bedroomOpen = false, isHasBooks = false, isHasFirecracker = false, isHasAmongus = false, escpe = false, gameover = false, first_run = true, look_around = false, isHasTrap = false, loop = false, first = true, firhut = true, firroo = true, meat_open = false, isHasAxe = false, isHasBrick = false, lamp = false, oil = false, lamp_oil = false, house1_com = false, house2_com = false, house3_com = false, house4_com = false, church_open = false, isHasKey4 = false, im_gay = true, isHasMeat = false, i_love_furry = true, isHasMask = false, poison = false, god = true, dog_die = false, home_open = false, fit = true, fir = true, fig = false, fig2 = false, fig3 = true, fit1 = true, fit2 = true, chg = false, T_virus = true, catag = true, tigr = true;
 	main();
 }
+
+//меню и прочее
+// 
 //выбор локации
 void levels() {
 	system("cls");
@@ -4978,14 +4997,14 @@ void main_menu() {
 	system("cls");
 	rnd = rand() % 100;
 	if (Language) {
-		cout << "=================base_escape_v3.7.1=================" << endl << endl;
-		cout << "Welcome to my updated version of base_escape_v3.7.1\n====================================================\n                       Start 1\n                     Load save 2\n                About the developers 3\n                  Русский/English 4\n              =========================\n                    Changes list 5\n                    Achievements 6\n              =========================\n                  Delete game data 7\n                       Exit 0\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n" << endl;
+		cout << "=================base_escape_v3.8=================" << endl << endl;
+		cout << "Welcome to my updated version of base_escape_v3.8\n==================================================\n                       Start 1\n                     Load save 2\n                About the developers 3\n                  Русский/English 4\n              =========================\n                    Changes list 5\n                    Achievements 6\n              =========================\n                  Delete game data 7\n               Enter “Traveler Code” 8\n                       Exit 0\n\n\n\n\n\n\n\n\n\n\n\n\n\n" << endl;
 		if (rnd == 4)
 			cout << "Cheat: 6 -> 3 -> 7 -> 5 -> 1/2";
 	}
 	if (!Language) {
-		cout << "======================base_escape_v3.7.1======================" << endl << endl;
-		cout << " Добро пожаловать в мою обновлённую версию base_escape_v3.7.1\n==============================================================\n                           Старт 1\n                   Загрузить сохранение 2\n                      О Разработчиках 3\n                      Русский/English 4\n              ==================================\n                      Список изменений 5\n                         Достижения 6\n              ==================================\n                   Удалить игровые данные 7\n                           Выйти 0\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n" << endl;
+		cout << "======================base_escape_v3.8======================" << endl << endl;
+		cout << " Добро пожаловать в мою обновлённую версию base_escape_v3.8\n============================================================\n                           Старт 1\n                   Загрузить сохранение 2\n                      О Разработчиках 3\n                      Русский/English 4\n              ==================================\n                      Список изменений 5\n                         Достижения 6\n              ==================================\n                   Удалить игровые данные 7\n                Ввести “Код Путешественника” 8\n                           Выйти 0\n\n\n\n\n\n\n\n\n\n\n\n\n\n" << endl;
 		if (rnd == 4)
 			cout << "Чит: 6 -> 3 -> 7 -> 5 -> 1/2";
 	}
@@ -5024,8 +5043,33 @@ void main_menu() {
 		cheat *= 3;
 		delte();
 		break;
+	case '8':
+		system("cls");
+		if (Language)
+			cout << "========Traveler Code========\nEnter traveler code: ";
+		if (!Language)
+			cout << "=========Код Путешественника=========\nВведите код путешественника: ";
+		cin >> travel_code;
+		if (travel_code == end_code)
+			trave1_code();
+		else {
+			if (Language)
+				cout << "\n\nIncorrect code!" << endl << endl;
+			if (!Language)
+				cout << "\n\nНеверный код!" << endl << endl;
+			system("pause");
+			main_menu();
+		}
+		break;
 	case '0':
 		exit(0);
+		break;
+	case '+':
+		system("cls");
+		cin >> im_furry_gay;
+		if (im_furry_gay == "IM_GOD")
+			nhelp += 666;
+		main_menu();
 		break;
 	default:
 		main_menu();
@@ -5066,9 +5110,9 @@ void soc_netw() {
 void updet_list() {
 	system("cls");
 	if (Language)
-		cout << "==========================================\n             List of changes:\n==========================================\n*Reworked location: Yard\n*Fixed save system\n\n==========================================\n        Plans for future updates:\n==========================================\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n" << endl << endl << endl;
+		cout << "==========================================\n             List of changes:\n==========================================\n*Feedback system added\n*“Traveler Code” added\n\n==========================================\n        Plans for future updates:\n==========================================\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n" << endl << endl << endl;
 	if (!Language)
-		cout << "==========================================\n            Список изменений:\n==========================================\n*Переработана локация: Двор\n*Исправлена система сохранений\n\n==========================================\n        Планы на будущие обновления:\n==========================================\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n" << endl << endl << endl;
+		cout << "==========================================\n            Список изменений:\n==========================================\n*Добавлена система обратной связи\n*Добавлен “Код Путешественника”\n\n==========================================\n        Планы на будущие обновления:\n==========================================\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n" << endl << endl << endl;
 	system("pause");
 	main_menu();
 }
@@ -5190,6 +5234,25 @@ void delte() {
 	system("pause");
 	main_menu();
 }
+//код путешественника
+void trave1_code() {
+	system("cls");
+	if (Language)
+		cout << "Hi, thanks for taking a look here. Honestly, it's very nice. I hope you liked my game\nBut if you find any bugs while playing, then I will be grateful if you write to me about them in Telegram.\nWell, I have no right to detain you any longer.\nWhen you press the “+” button in the menu, an add. menu will open, enter there: “IM_GOD” and you will get 666 hints\n=========================================\nOpen my Telegram 1\nExit 2" << endl;
+	if (!Language)
+		cout << "Привет, спасибо что решил заглянуть сюда. Честно, это очень приятно.\nЯ надеюсь тебе понравилась моя игра, но если ты нашёл какие-то баги при прохождении,\nТо я буду очень признателен, если ты напишешь мне о них в Telegram.\nЧтож не имею права более задерживать тебя.\nПри нажатии в меню кнопки “+”, откроется доп. меню, введи там: “IM_GOD” и ты получишь 666 подсказок\n==========================================\nОткрыть мой Telegram 1\nВыйти 2" << endl;
+	switch (_getch()) {
+	case '1':
+		system("explorer https://t.me/+VLJzjVRg8ElkZWYy");
+		main_menu();
+		break;
+	case '2':
+		main_menu();
+		break;
+	default:
+		trave1_code();
+	}
+}
 
 //сейв
 void save(int s) {
@@ -5235,7 +5298,7 @@ void save(int s) {
 		if (file.is_open()) {
 			file << "ABtY{~U48s6tMhxHPvYd?GkV@y#W~v";
 			file.close();
-			cout  << "SAVE SUCCESSFUL" << endl;
+			cout << "SAVE SUCCESSFUL" << endl;
 			nsave++;
 			system("pause");
 			system("cls");
@@ -5247,7 +5310,7 @@ void save(int s) {
 		if (file.is_open()) {
 			file << "hTao5on4gxvfe@N?yBHiUIR%s?WrUL";
 			file.close();
-			cout  << "SAVE SUCCESSFUL" << endl;
+			cout << "SAVE SUCCESSFUL" << endl;
 			nsave++;
 			system("pause");
 			system("cls");
@@ -5257,11 +5320,10 @@ void save(int s) {
 }
 
 
+
 /*
 
-									План переработки двора:
-						      ☑ - готово  ❎ - не готово  “” - ковычки
-1.Новая механика двора - сарай закрыт на кодовый замок 4 символа ☑
-2.Код раскидан по подвалу и двору ☑
-3.Теперь можно вернуться в подвал ☑
+												План:
+							  ☑ - готово  ❎ - не готово  “” - ковычки
+
 */
