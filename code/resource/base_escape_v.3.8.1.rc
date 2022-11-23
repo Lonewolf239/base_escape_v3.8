@@ -51,8 +51,8 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 3,8,0,0
- PRODUCTVERSION 3,8,0,0
+ FILEVERSION 3,8,1,0
+ PRODUCTVERSION 3,8,1,0
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -69,12 +69,12 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "Lonewolf239"
             VALUE "FileDescription", "Base_escape by. Lonewolf239"
-            VALUE "FileVersion", "3.8"
+            VALUE "FileVersion", "3.8.1"
             VALUE "InternalName", "Base_escape"
             VALUE "LegalCopyright", "Copyright (C) 2022"
             VALUE "OriginalFilename", "Base_escape"
             VALUE "ProductName", "Base_escape"
-            VALUE "ProductVersion", "3.8"
+            VALUE "ProductVersion", "3.8.1"
         END
     END
     BLOCK "VarFileInfo"

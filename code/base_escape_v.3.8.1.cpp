@@ -11,7 +11,7 @@ using namespace std;
 
 int ndeath = 0, nsave = 0, nmoves = 0, timr = 45; float x_pl = 0, infection_stage = 0, nhelp = 0, qhelp = 0, cheat = 0, rnd = 0, code = 0, end_code = 999 + rand() % 10000, travel_code;
 bool achievements1 = false, achievements2 = false, achievements3 = false, achievements4 = false, achievements5 = false, achievements6 = false, achievements7 = false, achievements8 = false, achievements9 = false, achievements10 = false, somebody = false, gas_gas_gas = false, sans = false;
-bool Language = true, first_start = true, good_ending = false, firw = true, git = true, comp = false, bag_com = false;
+bool Language = true, first_start = true, good_ending = false, firw = true, git = true, comp = false, bag_com = false, travel_com = false;
 char qsave[] = { "ffffffffff" };
 //инвентарь часть 1
 bool isHasKnife = false, isHasKey1 = false, figt = true, isHasHammer = false, isHasValve = false, isHasPotatoes = false, pig_eat = false, windows_broke = false;
@@ -25,7 +25,7 @@ bool isHasKey3 = false, bedroomOpen = false, isHasBooks = false, isHasFirecracke
 bool escpe = false, gameover = false, first_run = true;
 bool look_around = false, isHasTrap = false, loop = false, first = true, firhut = true, firroo = true, meat_open = false, isHasAxe = false, isHasBrick = false, lamp = false, oil = false, lamp_oil = false, house1_com = false, house2_com = false, house3_com = false, house4_com = false, church_open = false;
 bool isHasKey4 = false, im_gay = true, isHasMeat = false, i_love_furry = true, isHasMask = false, poison = false, gig = false, god = true, ryr = false, dog_die = false, home_open = false, fit = true, fir = true, fig = false, fig2 = false, fig3 = true, fit1 = true, fit2 = true, chg = false, T_virus = true, catag = true, tigr = true, tipr = false, typ = false;
-string wind, shd, dor, house1, house2, house3, meat, haha, stage, door1, door2, meat_op, dach1, dach2, dach, cruch, cab, caret, im_furry_gay;
+string wind, shd, dor, house1, house2, house3, meat, haha, stage, door1, door2, meat_op, dach1, dach2, dach, cruch, cab, caret, im_furry_gay, travel_code_text, cheat_panel, travel_check;
 //инвентарь часть 6
 bool isHasKey5 = false;
 
@@ -357,7 +357,7 @@ void save() {
 			system("pause");
 			cycle5();
 		}
-		if (sae == "5mB3vGgpi|gT~pn2zPiwW?L8@57kZJ72wU6") {
+		if (sae == "s9H7?o|oZ|ZtojACuw%v?w7iOF|r2YK~iavi") {
 			cout << "LOADING SAVE..." << endl << endl;
 			Sleep(1000);
 			cout << "SAVE LOADED SUCCESSFULLY" << endl << endl;
@@ -4148,9 +4148,9 @@ void liroom() {
 		nmoves++;
 		system("cls");
 		if (Language)
-			cout << "___________________________________________\nYou approached a bookcase...it was full of books\nYou took out one '72 Facts About Concrete'...you opened a random page\n...The first prototype of concrete mix was invented about 6000 years ago...\nInteresting...you put the book away..." << endl;
+			cout << "___________________________________________\nYou approached a bookcase...it was full of books\nYou took out one “72 Facts About Concrete”...you opened a random page\n“The first prototype of concrete mix was invented about 6000 years ago”\nInteresting...you put the book away..." << endl;
 		if (!Language)
-			cout << "___________________________________________\nВы подошли к стеллажу...он был полностью забит книгами\nВы достали одну '72 Факта о Бетоне'...вы открыли случайную страницу\n...Первый прототип бетонной смеси был изобретен около 6000 лет назад...\nИнтересно...вы убрали книгу на место..." << endl;
+			cout << "___________________________________________\nВы подошли к стеллажу...он был полностью забит книгами\nВы достали одну “72 Факта о Бетоне”...вы открыли случайную страницу\n“Первый прототип бетонной смеси был изобретен около 6000 лет назад”\nИнтересно...вы убрали книгу на место..." << endl;
 		system("pause");
 		liroom();
 		break;
@@ -4659,27 +4659,27 @@ void deep_catacombs() {
 void deep_room1() {
 	system("cls");
 	if (Language)
-		cout << "___________________________________________\nYou entered the first door...it was a small room...\nThere was a table in the center of the room...on it lay the 'Quantum Physics Textbook'...\nYou opened it..." << endl;
+		cout << "___________________________________________\nYou entered the first door...it was a small room...\nThere was a table in the center of the room...on it lay the “Quantum Physics Textbook”...\nYou opened it..." << endl;
 	if (!Language)
-		cout << "___________________________________________\nВы зашли в первую дверь...это была небольшая комната...\nВ центре комнаты стоял стол...на нём лежал 'Учебник по квантовой физике'...\nВы открыли его..." << endl;
+		cout << "___________________________________________\nВы зашли в первую дверь...это была небольшая комната...\nВ центре комнаты стоял стол...на нём лежал “Учебник по квантовой физике”...\nВы открыли его..." << endl;
 	system("pause");
 	system("cls");
 	if (Language)
-		cout << "___________________________________________\nInside the 'Quantum Physics Textbook' was the 'Joke Book'...you opened it..." << endl;
+		cout << "___________________________________________\nInside the “Quantum Physics Textbook” was the “Joke Book”...you opened it..." << endl;
 	if (!Language)
-		cout << "___________________________________________\nВнутри 'Учебника по квантовой физике' был 'Сборник анекдотов'...вы открыли его..." << endl;
+		cout << "___________________________________________\nВнутри “Учебника по квантовой физике” был “Сборник анекдотов”...вы открыли его..." << endl;
 	system("pause");
 	system("cls");
 	if (Language)
-		cout << "___________________________________________\nInside the 'Joke Book' was the 'Quantum Physics Textbook'...you opened it..." << endl;
+		cout << "___________________________________________\nInside the “Joke Book” was the “Quantum Physics Textbook”...you opened it..." << endl;
 	if (!Language)
-		cout << "___________________________________________\nВнутри 'Сборника анекдотов' был 'Учебник по квантовой физике'...вы открыли его..." << endl;
+		cout << "___________________________________________\nВнутри “Сборника анекдотов” был “Учебник по квантовой физике”...вы открыли его..." << endl;
 	system("pause");
 	system("cls");
 	if (Language)
-		cout << "___________________________________________\nInside the 'Quantum Physics Textbook' was the 'Joke Book'...stop...you closed it and left the room..." << endl;
+		cout << "___________________________________________\nInside the “Quantum Physics Textbook” was the “Joke Book”...stop...you closed it and left the room..." << endl;
 	if (!Language)
-		cout << "___________________________________________\nВнутри 'Учебника по квантовой физике' был 'Сборник анекдотов'...стоп...вы закрыли его и вышли из комнаты..." << endl;
+		cout << "___________________________________________\nВнутри “Учебника по квантовой физике” был “Сборник анекдотов”...стоп...вы закрыли его и вышли из комнаты..." << endl;
 	system("pause");
 	deep_catacombs();
 }
@@ -4749,9 +4749,9 @@ void deep_room3() {
 void deep_room4() {
 	system("cls");
 	if (Language)
-		cout << "___________________________________________\nYou opened the door and entered a strange room...it was a small room with a computer desk against the wall...\nYou walked up to it and were horrified...on the table...under the table...even by the table there were huge piles of coffee cups...\nThe computer itself was out of power, but there was a note on its screen:\n'Don't forget to write down the last room of the basement'\n...strange place...you turned around and went into the corridor. .." << endl;
+		cout << "___________________________________________\nYou opened the door and entered a strange room...it was a small room with a computer desk against the wall...\nYou walked up to it and were horrified...on the table...under the table...even by the table there were huge piles of coffee cups...\nThe computer itself was out of power, but there was a note on its screen:\n“Don't forget to write down the last room of the basement”\n...strange place...you turned around and went into the corridor. .." << endl;
 	if (!Language)
-		cout << "___________________________________________\nВы открыли дверь и вошли в странную комнату...это была небольшая комнатка с компьютерным столом у стены...\nВы подошли к нему и были повергнуты в ужас...на столе...под столом...даже у стола были огромные кучи стаканчиков из под кофе...\nСам компьютор был обесточен, но на его экране висела записка:\n'Не забудь прописать последнюю комнату подвала'\n...странное место...вы развернулись и ушли в коридор..." << endl;
+		cout << "___________________________________________\nВы открыли дверь и вошли в странную комнату...это была небольшая комнатка с компьютерным столом у стены...\nВы подошли к нему и были повергнуты в ужас...на столе...под столом...даже у стола были огромные кучи стаканчиков из под кофе...\nСам компьютор был обесточен, но на его экране висела записка:\n“Не забудь прописать последнюю комнату подвала”\n...странное место...вы развернулись и ушли в коридор..." << endl;
 	system("pause");
 	deep_catacombs();
 }
@@ -4797,16 +4797,6 @@ void endgame() {
 			cout << endl << endl << endl << "ERROR DELETE SAVE FILE" << endl << endl << endl << endl;
 		else
 			cout << endl << endl << endl << "SAVE FILES SUCCESSFULLY DELETED" << endl << endl << endl << endl;
-		system("pause");
-		system("cls");
-	}
-	else {
-		cout << endl << endl << endl << "SELECT SAVE MODE UNLOCKED" << endl << endl << endl << endl;
-		ofstream file("C:/Windows/Temp/save.txt");
-		if (file.is_open()) {
-			file << "5mB3vGgpi|gT~pn2zPiwW?L8@57kZJ72wU6";
-			file.close();
-		}
 		system("pause");
 		system("cls");
 	}
@@ -4996,15 +4986,42 @@ void levels() {
 void main_menu() {
 	system("cls");
 	rnd = rand() % 100;
+	if (!travel_com) {
+		ifstream travel("C:/Windows/Temp/travel.txt");
+		travel >> travel_check;
+		travel.close();
+		if (travel_check == "O5Sq{NsF*5Go3~akOy51wT$R2{1W%LSIiAxk")
+			travel_com = true;
+	}
 	if (Language) {
-		cout << "=================base_escape_v3.8=================" << endl << endl;
-		cout << "Welcome to my updated version of base_escape_v3.8\n==================================================\n                       Start 1\n                     Load save 2\n                About the developers 3\n                  Русский/English 4\n              =========================\n                    Changes list 5\n                    Achievements 6\n              =========================\n                  Delete game data 7\n               Enter “Traveler Code” 8\n                       Exit 0\n\n\n\n\n\n\n\n\n\n\n\n\n\n" << endl;
+		if (!travel_com) {
+			travel_code_text = "               Enter “Traveler Code” 8";
+			cheat_panel = "\n";
+		}
+		if (travel_com) {
+			travel_code_text = "                   Traveler Menu 8";
+			cheat_panel = "\n                    Cheat panel +\n";
+		}
+		cout << "                 Base_Escape_v3.8.1                 " << endl;
+		cout << "====================================================\n                     Main menu\n====================================================\n                       Start 1\n                     Load save 2\n                About the developers 3\n                  Русский/English 4\n              =========================\n                    Changes list 5\n                    Achievements 6\n              =========================\n                  Delete game data 7\n" << travel_code_text << cheat_panel << "                       Exit 0\n\n\n\n\n\n\n\n\n\n\n\n\n" << endl;
+		if (!travel_com)
+			cout << endl;
 		if (rnd == 4)
 			cout << "Cheat: 6 -> 3 -> 7 -> 5 -> 1/2";
 	}
 	if (!Language) {
-		cout << "======================base_escape_v3.8======================" << endl << endl;
-		cout << " Добро пожаловать в мою обновлённую версию base_escape_v3.8\n============================================================\n                           Старт 1\n                   Загрузить сохранение 2\n                      О Разработчиках 3\n                      Русский/English 4\n              ==================================\n                      Список изменений 5\n                         Достижения 6\n              ==================================\n                   Удалить игровые данные 7\n                Ввести “Код Путешественника” 8\n                           Выйти 0\n\n\n\n\n\n\n\n\n\n\n\n\n\n" << endl;
+		if (!travel_com) {
+			travel_code_text = "                Ввести “Код Путешественника” 8";
+			cheat_panel = "\n";
+		}
+		if (travel_com) {
+			travel_code_text = "                    Меню путешественника 8";
+			cheat_panel = "\n                         Чит панель +\n";
+		}
+		cout << "                      Base_Escape_v3.8.1                 " << endl;
+		cout << "==============================================================\n                         Главное меню\n==============================================================\n                           Старт 1\n                   Загрузить сохранение 2\n                      О Разработчиках 3\n                      Русский/English 4\n              ==================================\n                      Список изменений 5\n                         Достижения 6\n              ==================================\n                   Удалить игровые данные 7\n" << travel_code_text << cheat_panel << "                           Выйти 0\n\n\n\n\n\n\n\n\n\n\n\n\n" << endl;
+		if (!travel_com)
+			cout << endl;
 		if (rnd == 4)
 			cout << "Чит: 6 -> 3 -> 7 -> 5 -> 1/2";
 	}
@@ -5045,30 +5062,48 @@ void main_menu() {
 		break;
 	case '8':
 		system("cls");
-		if (Language)
-			cout << "========Traveler Code========\nEnter traveler code: ";
-		if (!Language)
-			cout << "=========Код Путешественника=========\nВведите код путешественника: ";
-		cin >> travel_code;
-		if (travel_code == end_code)
-			trave1_code();
-		else {
+		if (!travel_com) {
 			if (Language)
-				cout << "\n\nIncorrect code!" << endl << endl;
+				cout << "========Traveler Code========\nEnter traveler code: ";
 			if (!Language)
-				cout << "\n\nНеверный код!" << endl << endl;
-			system("pause");
-			main_menu();
+				cout << "=========Код Путешественника=========\nВведите код путешественника: ";
+			cin >> travel_code;
+			if (travel_code == end_code) {
+				ofstream travel("C:/Windows/Temp/travel.txt");
+				travel << "O5Sq{NsF*5Go3~akOy51wT$R2{1W%LSIiAxk";
+				travel.close();
+				travel_com = true;
+				trave1_code();
+			}
+			else {
+				if (Language)
+					cout << "\n\nIncorrect code!" << endl << endl;
+				if (!Language)
+					cout << "\n\nНеверный код!" << endl << endl;
+				system("pause");
+				main_menu();
+			}
 		}
+		if (travel_com)
+			trave1_code();
 		break;
 	case '0':
 		exit(0);
 		break;
 	case '+':
 		system("cls");
-		cin >> im_furry_gay;
-		if (im_furry_gay == "IM_GOD")
-			nhelp += 666;
+		if (travel_com) {
+			cout << "      CHEAT PANEL\n=======================\nEnter cheat code: ";
+			cin >> im_furry_gay;
+			if (im_furry_gay == "IM_GOD") {
+				nhelp += 666;
+				ofstream file("C:/Windows/Temp/save.txt");
+				if (file.is_open()) {
+					file << "s9H7?o|oZ|ZtojACuw%v?w7iOF|r2YK~iavi";
+					file.close();
+				}
+			}
+		}
 		main_menu();
 		break;
 	default:
@@ -5110,9 +5145,9 @@ void soc_netw() {
 void updet_list() {
 	system("cls");
 	if (Language)
-		cout << "==========================================\n             List of changes:\n==========================================\n*Feedback system added\n*“Traveler Code” added\n\n==========================================\n        Plans for future updates:\n==========================================\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n" << endl << endl << endl;
+		cout << "==========================================\n             List of changes:\n==========================================\n*Added the ability to remove certain items\n*Some visual changes\n*Now the “Traveler Code” needs to be entered only once\n*Changed the system for obtaining “Location Selection Mode”\n\n==========================================\n        Plans for future updates:\n==========================================\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n" << endl << endl << endl;
 	if (!Language)
-		cout << "==========================================\n            Список изменений:\n==========================================\n*Добавлена система обратной связи\n*Добавлен “Код Путешественника”\n\n==========================================\n        Планы на будущие обновления:\n==========================================\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n" << endl << endl << endl;
+		cout << "==========================================\n            Список изменений:\n==========================================\n*Добавлена возможность удалять определённые элементы\n*Некоторые визуальные изменения\n*Теперь “Код Путешественника” нужно вводить только один раз\n*Изменена система получения “Режима выбора локации”\n\n==========================================\n        Планы на будущие обновления:\n==========================================\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n" << endl << endl << endl;
 	system("pause");
 	main_menu();
 }
@@ -5209,38 +5244,135 @@ void achievements() {
 //удалялка
 void delte() {
 	string files;
+	int choice;
 	system("cls");
 	if (Language)
-		cout << "Are you sure you want to delete game data? yes/no" << endl;
+		cout << "What data do you want to delete?\nSaves file 1\nAchievement files 2\nTraveler files 3\nAll data 4" << endl;
 	if (!Language)
-		cout << "Вы уверены что хотите удалить игровые данные? yes/no" << endl;
-	cin >> files;
-	if (files == "Yes" || files == "yes" || files == "Delete" || files == "delete") {
-		if (remove("C:/Windows/Temp/save.txt") != 0)
-			cout << endl << endl << endl << "		ERROR DELETE SAVE FILE" << endl;
-		else
-			cout << endl << endl << endl << "		SAVE FILES SUCCESSFULLY DELETED" << endl;
-		if (remove("C:/Windows/Temp/qsave.txt") != 0)
-			cout << "		ERROR DELETE ACHIEVEMENTS FILE" << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl;
-		else {
-			cout << "		ACHIEVEMENTS FILES SUCCESSFULLY DELETED" << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl;
-			achievements1 = false, achievements2 = false, achievements3 = false, achievements4 = false, achievements5 = false, achievements6 = false, achievements7 = false, achievements8 = false, achievements9 = false, achievements10 = false;
-			for (int i = 0; i < 10; i++)
-				qsave[i] = 'f';
-		}
+		cout << "Какие данные вы хотите удалить?\nФайлы сохранения 1\nФайлы достижений 2\nФайлы путешественника 3\nВсе данные 4" << endl;
+	switch (_getch()) {
+	case '1':
+		choice = 0;
+		break;
+	case '2':
+		choice = 1;
+		break;
+	case '3':
+		choice = 2;
+		break;
+	case '4':
+		choice = 3;
+		break;
+	default:
+		delte();
 	}
-	else
-		cout << endl << endl << endl << endl << endl << "	 OOOO   KK  KK\n	OO  OO  KK KK\n	OO  OO  KKKK\n	OO  OO  KK KK\n	 OOOO   KK  KK" << endl << endl << endl << endl << endl << endl << endl << endl;
-	system("pause");
-	main_menu();
+	system("cls");
+	if (choice == 0) {
+		if (Language)
+			cout << "Are you sure you want to delete save files? yes/no" << endl;
+		if (!Language)
+			cout << "Вы уверены что хотите удалить файлы сохранения? yes/no" << endl;
+		cin >> files;
+		if (files == "Yes" || files == "yes" || files == "Delete" || files == "delete") {
+			cout << endl << endl << endl << "		DELETING...";
+			Sleep(1000);
+			if (remove("C:/Windows/Temp/save.txt") != 0)
+				cout << endl << endl << endl << "		ERROR DELETE SAVE FILE" << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl;
+			else
+				cout << endl << endl << endl << "		SAVE FILES SUCCESSFULLY DELETED" << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl;
+		}
+		else
+			cout << endl << endl << endl << endl << endl << "	 OOOO   KK  KK\n	OO  OO  KK KK\n	OO  OO  KKKK\n	OO  OO  KK KK\n	 OOOO   KK  KK" << endl << endl << endl << endl << endl << endl << endl << endl;
+		system("pause");
+		main_menu();
+	}
+	if (choice == 1) {
+		if (Language)
+			cout << "Are you sure you want to delete achievement files? yes/no" << endl;
+		if (!Language)
+			cout << "Вы уверены что хотите удалить файлы достижений? yes/no" << endl;
+		cin >> files;
+		if (files == "Yes" || files == "yes" || files == "Delete" || files == "delete") {
+			cout << endl << endl << endl << "		DELETING...";
+			Sleep(1000);
+			if (remove("C:/Windows/Temp/qsave.txt") != 0)
+				cout << endl << endl << endl << "		ERROR DELETE ACHIEVEMENTS FILE" <<endl  << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl;
+			else {
+				cout << endl << endl << endl << "		ACHIEVEMENTS FILES SUCCESSFULLY DELETED" << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl;
+				achievements1 = false, achievements2 = false, achievements3 = false, achievements4 = false, achievements5 = false, achievements6 = false, achievements7 = false, achievements8 = false, achievements9 = false, achievements10 = false;
+				for (int i = 0; i < 10; i++)
+					qsave[i] = 'f';
+			}
+		}
+		else
+			cout << endl << endl << endl << endl << endl << "	 OOOO   KK  KK\n	OO  OO  KK KK\n	OO  OO  KKKK\n	OO  OO  KK KK\n	 OOOO   KK  KK" << endl << endl << endl << endl << endl << endl << endl << endl;
+		system("pause");
+		main_menu();
+	}
+	if (choice == 2) {
+		if (Language)
+			cout << "Are you sure you want to delete traveler files? yes/no" << endl;
+		if (!Language)
+			cout << "Вы уверены что хотите удалить файлы путешественника? yes/no" << endl;
+		cin >> files;
+		if (files == "Yes" || files == "yes" || files == "Delete" || files == "delete") {
+			cout << endl << endl << endl << "		DELETING...";
+			Sleep(1000);
+			if (remove("C:/Windows/Temp/travel.txt") != 0)
+				cout << endl << endl << endl << "		ERROR DELETE TRAVELER FILES" << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl;
+			else {
+				cout << endl << endl << endl << "		TRAVELER FILES SUCCESSFULLY DELETED" << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl;
+				travel_com = false;
+				travel_check = "";
+			}
+		}
+		else
+			cout << endl << endl << endl << endl << endl << "	 OOOO   KK  KK\n	OO  OO  KK KK\n	OO  OO  KKKK\n	OO  OO  KK KK\n	 OOOO   KK  KK" << endl << endl << endl << endl << endl << endl << endl << endl;
+		system("pause");
+		main_menu();
+	}
+	if (choice == 3) {
+		if (Language)
+			cout << "Are you sure you want to delete game data? yes/no" << endl;
+		if (!Language)
+			cout << "Вы уверены что хотите удалить игровые данные? yes/no" << endl;
+		cin >> files;
+		if (files == "Yes" || files == "yes" || files == "Delete" || files == "delete") {
+			cout << endl << endl << endl << "		DELETING...";
+			Sleep(1000);
+			if (remove("C:/Windows/Temp/save.txt") != 0)
+				cout << endl << endl << endl << "		ERROR DELETE SAVE FILE" << endl;
+			else
+				cout << endl << endl << endl << "		SAVE FILES SUCCESSFULLY DELETED" << endl;
+			if (remove("C:/Windows/Temp/qsave.txt") != 0)
+				cout << "		ERROR DELETE ACHIEVEMENTS FILE" << endl;
+			else {
+				cout << "		ACHIEVEMENTS FILES SUCCESSFULLY DELETED" << endl;
+				achievements1 = false, achievements2 = false, achievements3 = false, achievements4 = false, achievements5 = false, achievements6 = false, achievements7 = false, achievements8 = false, achievements9 = false, achievements10 = false;
+				for (int i = 0; i < 10; i++)
+					qsave[i] = 'f';
+			}
+			if (remove("C:/Windows/Temp/travel.txt") != 0)
+				cout << "		ERROR DELETE TRAVELER FILES" << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl;
+			else {
+				cout << "		TRAVELER FILES SUCCESSFULLY DELETED" << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl;
+				travel_com = false;
+				travel_check = "";
+			}
+		}
+		else
+			cout << endl << endl << endl << endl << endl << "	 OOOO   KK  KK\n	OO  OO  KK KK\n	OO  OO  KKKK\n	OO  OO  KK KK\n	 OOOO   KK  KK" << endl << endl << endl << endl << endl << endl << endl << endl;
+		system("pause");
+		main_menu();
+	}
 }
 //код путешественника
 void trave1_code() {
 	system("cls");
 	if (Language)
-		cout << "Hi, thanks for taking a look here. Honestly, it's very nice. I hope you liked my game\nBut if you find any bugs while playing, then I will be grateful if you write to me about them in Telegram.\nWell, I have no right to detain you any longer.\nWhen you press the “+” button in the menu, an add. menu will open, enter there: “IM_GOD” and you will get 666 hints\n=========================================\nOpen my Telegram 1\nExit 2" << endl;
+		cout << "Hi, thanks for taking a look here. Honestly, it's very nice. I hope you liked my game\nBut if you find any bugs while playing, then I will be grateful if you write to me about them in Telegram.\nWell, I have no right to detain you any longer.\nThe cheat code “IM_GOD” gives:\n*666 hints\nUnlock “Location selection mode”\n=========================================\nOpen my Telegram 1\nExit 2" << endl;
 	if (!Language)
-		cout << "Привет, спасибо что решил заглянуть сюда. Честно, это очень приятно.\nЯ надеюсь тебе понравилась моя игра, но если ты нашёл какие-то баги при прохождении,\nТо я буду очень признателен, если ты напишешь мне о них в Telegram.\nЧтож не имею права более задерживать тебя.\nПри нажатии в меню кнопки “+”, откроется доп. меню, введи там: “IM_GOD” и ты получишь 666 подсказок\n==========================================\nОткрыть мой Telegram 1\nВыйти 2" << endl;
+		cout << "Привет, спасибо что решил заглянуть сюда. Честно, это очень приятно.\nЯ надеюсь тебе понравилась моя игра, но если ты нашёл какие-то баги при прохождении,\nТо я буду очень признателен, если ты напишешь мне о них в Telegram.\nЧтож не имею права более задерживать тебя.\nЧит код “IM_GOD” выдаёт:\n*666 подсказок\n*Разблокировка “Режима выбора локации”\n==========================================\nОткрыть мой Telegram 1\nВыйти 2" << endl;
 	switch (_getch()) {
 	case '1':
 		system("explorer https://t.me/+VLJzjVRg8ElkZWYy");
