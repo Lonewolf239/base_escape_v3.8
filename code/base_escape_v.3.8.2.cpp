@@ -11,7 +11,7 @@ using namespace std;
 
 int ndeath = 0, nsave = 0, nmoves = 0, timr = 45; float x_pl = 0, infection_stage = 0, nhelp = 0, qhelp = 0, cheat = 0, rnd = 0, code = 0, end_code = 999 + rand() % 10000, travel_code;
 bool achievements1 = false, achievements2 = false, achievements3 = false, achievements4 = false, achievements5 = false, achievements6 = false, achievements7 = false, achievements8 = false, achievements9 = false, achievements10 = false, somebody = false, gas_gas_gas = false, sans = false;
-bool Language = true, first_start = true, good_ending = false, firw = true, git = true, comp = false, bag_com = false, travel_com = false;
+bool Language = true, first_start = true, good_ending = false, firw = true, git = true, comp = false, bag_com = false, travel_com = false, cheat_get = false, cheat_get1 = false, not_delete = true;
 char qsave[] = { "ffffffffff" };
 //инвентарь часть 1
 bool isHasKnife = false, isHasKey1 = false, figt = true, isHasHammer = false, isHasValve = false, isHasPotatoes = false, pig_eat = false, windows_broke = false;
@@ -25,7 +25,7 @@ bool isHasKey3 = false, bedroomOpen = false, isHasBooks = false, isHasFirecracke
 bool escpe = false, gameover = false, first_run = true;
 bool look_around = false, isHasTrap = false, loop = false, first = true, firhut = true, firroo = true, meat_open = false, isHasAxe = false, isHasBrick = false, lamp = false, oil = false, lamp_oil = false, house1_com = false, house2_com = false, house3_com = false, house4_com = false, church_open = false;
 bool isHasKey4 = false, im_gay = true, isHasMeat = false, i_love_furry = true, isHasMask = false, poison = false, gig = false, god = true, ryr = false, dog_die = false, home_open = false, fit = true, fir = true, fig = false, fig2 = false, fig3 = true, fit1 = true, fit2 = true, chg = false, T_virus = true, catag = true, tigr = true, tipr = false, typ = false;
-string wind, shd, dor, house1, house2, house3, meat, haha, stage, door1, door2, meat_op, dach1, dach2, dach, cruch, cab, caret, im_furry_gay, travel_code_text, cheat_panel, travel_check;
+string wind, shd, dor, house1, house2, house3, meat, haha, stage, door1, door2, meat_op, dach1, dach2, dach, cruch, cab, caret, im_furry_gay, travel_code_text, cheat_panel, travel_check, cheat_unlock, open_cheat, f1;
 //инвентарь часть 6
 bool isHasKey5 = false;
 
@@ -261,7 +261,7 @@ void save() {
 		timr = 45; x_pl = 0, infection_stage = 0, firw = true, to_yard = false, to_basement = false, door_close = true, git = true, comp = false, bag_com = false, isHasKnife = false, isHasKey1 = false, figt = true, isHasHammer = false, isHasValve = false, isHasPotatoes = false, pig_eat = false, windows_broke = false, isHasCrowbar = false, isHasMaul = false, isHasExplosives = false, isHasKey2 = false, isHasPlanks = false, isHasKey3 = false, bedroomOpen = false, isHasBooks = false, isHasFirecracker = false, isHasAmongus = false, escpe = false, gameover = false, first_run = true, look_around = false, loop = false, first = true, firhut = true, firroo = true, meat_open = false, isHasAxe = false, isHasBrick = false, lamp = false, oil = false, lamp_oil = false, house1_com = false, house2_com = false, house3_com = false, house4_com = false, church_open = false, isHasKey4 = false, im_gay = true, isHasMeat = false, i_love_furry = true, isHasMask = false, poison = false, god = true, dog_die = false, home_open = false, fit = true, fir = true, fig = false, fig2 = false, fig3 = true, fit1 = true, fit2 = true, chg = false, T_virus = true, catag = true, tigr = true;
 		file >> sae;
 		file.close();
-		if (sae == "lx55GZ6dG6eJBl2oh6S0vtXVS3|MsS") {
+		if (sae == "jyDHnlcfwg1Q@Rp|ijXCpnL$LxpFT0|JCuSq") {
 			cout << "LOADING SAVE..." << endl << endl;
 			Sleep(1000);
 			cout << "SAVE LOADED SUCCESSFULLY" << endl << endl;
@@ -271,7 +271,7 @@ void save() {
 			system("pause");
 			cycle2();
 		}
-		if (sae == "4Aw@87CkOwnuQ{a3e*7E0K?aLN3UDL?GcgR") {
+		if (sae == "FOA9QUSHeQHQDvR8|1$crr9mf0r{F%VVkKav") {
 			cout << "LOADING SAVE..." << endl << endl;
 			Sleep(1000);
 			cout << "SAVE LOADED SUCCESSFULLY" << endl << endl;
@@ -280,7 +280,7 @@ void save() {
 			system("pause");
 			cycle3();
 		}
-		if (sae == "owMPYNv@oy%Yf}g6WGSd2cpiS#k7|1YAqEs") {
+		if (sae == "SAy4*~5Jb{2@aFZMy?N3ayvQrLmIogJf$v$d") {
 			cout << "LOADING SAVE..." << endl << endl;
 			Sleep(1000);
 			cout << "SAVE LOADED SUCCESSFULLY" << endl << endl;
@@ -289,7 +289,7 @@ void save() {
 			system("pause");
 			cycle4();
 		}
-		if (sae == "#6Jrw8Rq5m{Hdxv2O6G{lkwA6T9DenpwOTh") {
+		if (sae == "rrm23f2Nen1h?@PpG2YHLxcx5h{u|r8$uPpP") {
 			cout << "LOADING SAVE..." << endl << endl;
 			Sleep(1000);
 			cout << "SAVE LOADED SUCCESSFULLY" << endl << endl;
@@ -298,7 +298,7 @@ void save() {
 			system("pause");
 			forest();
 		}
-		if (sae == "Fdcj*G2@~L~?j4Wb5NHw9$oG8lljs~") {
+		if (sae == "p25N}h|#E5kfIou|@~7cWcJ~G1vjU7~YJZ~|") {
 			cout << "LOADING SAVE..." << endl << endl;
 			Sleep(1000);
 			cout << "SAVE LOADED SUCCESSFULLY" << endl << endl;
@@ -308,7 +308,7 @@ void save() {
 			escpe = true, first_run = false;
 			forest();
 		}
-		if (sae == "H5$4N84@fgQ}Pndu0E8}jmWfp{wO4YMcLWd") {
+		if (sae == "zpl*|k*cMerj#~|~7FB2}KKTxp5XTAxB@zMB") {
 			cout << "LOADING SAVE..." << endl << endl;
 			Sleep(1000);
 			cout << "SAVE LOADED SUCCESSFULLY" << endl << endl;
@@ -317,7 +317,7 @@ void save() {
 			system("pause");
 			cycle5();
 		}
-		if (sae == "gc7k|DxbY~E#g~YW~S*7?aYE#TcYY0") {
+		if (sae == "Z6j8K8ijM{qk2*xXALSkm#0m{0bGllkmgWUL") {
 			cout << "LOADING SAVE..." << endl << endl;
 			Sleep(1000);
 			cout << "SAVE LOADED SUCCESSFULLY" << endl << endl;
@@ -327,7 +327,7 @@ void save() {
 			system("pause");
 			cycle5();
 		}
-		if (sae == "hTao5on4gxvfe@N?yBHiUIR%s?WrUL") {
+		if (sae == "MM82WRzxFM88t2waqHiCHTuHiV?18kLyee6#") {
 			cout << "LOADING SAVE..." << endl << endl;
 			Sleep(1000);
 			cout << "SAVE LOADED SUCCESSFULLY" << endl << endl;
@@ -337,7 +337,7 @@ void save() {
 			system("pause");
 			cycle5();
 		}
-		if (sae == "Ss9Hl9V7IR2KwlihlEYCa{}cHj~Eo~") {
+		if (sae == "69NqkR2F6A~1?nK}R}BhCoME4tzzWktNbIQQ") {
 			cout << "LOADING SAVE..." << endl << endl;
 			Sleep(1000);
 			cout << "SAVE LOADED SUCCESSFULLY" << endl << endl;
@@ -347,7 +347,7 @@ void save() {
 			system("pause");
 			cycle5();
 		}
-		if (sae == "ABtY{~U48s6tMhxHPvYd?GkV@y#W~v") {
+		if (sae == "qI$YqRaSn0dgLk?1LR4Ie#htuEl?k7GYe$a$") {
 			cout << "LOADING SAVE..." << endl << endl;
 			Sleep(1000);
 			cout << "SAVE LOADED SUCCESSFULLY" << endl << endl;
@@ -357,7 +357,7 @@ void save() {
 			system("pause");
 			cycle5();
 		}
-		if (sae == "s9H7?o|oZ|ZtojACuw%v?w7iOF|r2YK~iavi") {
+		if (sae == "F?DAa5mlZ4okAANeT6QDaNBWib%5EzG@1yA{F?C?") {
 			cout << "LOADING SAVE..." << endl << endl;
 			Sleep(1000);
 			cout << "SAVE LOADED SUCCESSFULLY" << endl << endl;
@@ -899,7 +899,7 @@ void door() {
 		system("cls");
 		ofstream file("C:/Windows/Temp/save.txt");
 		if (file.is_open()) {
-			file << "lx55GZ6dG6eJBl2oh6S0vtXVS3|MsS";
+			file << "jyDHnlcfwg1Q@Rp|ijXCpnL$LxpFT0|JCuSq";
 			file.close();
 			cout << "SAVE SUCCESSFUL" << endl << endl << endl;
 			nsave++;
@@ -1673,7 +1673,7 @@ void mansion() {
 		system("cls");
 		ofstream file("C:/Windows/Temp/save.txt");
 		if (file.is_open()) {
-			file << "4Aw@87CkOwnuQ{a3e*7E0K?aLN3UDL?GcgR";
+			file << "FOA9QUSHeQHQDvR8|1$crr9mf0r{F%VVkKav";
 			file.close();
 			cout << "SAVE SUCCESSFUL" << endl << endl << endl;
 			nsave++;
@@ -1782,7 +1782,7 @@ void gate() {
 			system("cls");
 			ofstream file("C:/Windows/Temp/save.txt");
 			if (file.is_open()) {
-				file << "#6Jrw8Rq5m{Hdxv2O6G{lkwA6T9DenpwOTh";
+				file << "rrm23f2Nen1h?@PpG2YHLxcx5h{u|r8$uPpP";
 				file.close();
 				cout << "SAVE SUCCESSFUL" << endl << endl << endl;
 				nsave++;
@@ -2170,7 +2170,7 @@ void ladder() {
 		system("cls");
 		ofstream file("C:/Windows/Temp/save.txt");
 		if (file.is_open()) {
-			file << "owMPYNv@oy%Yf}g6WGSd2cpiS#k7|1YAqEs";
+			file << "SAy4*~5Jb{2@aFZMy?N3ayvQrLmIogJf$v$d";
 			file.close();
 			cout << "SAVE SUCCESSFUL" << endl << endl << endl;
 			nsave++;
@@ -3125,7 +3125,7 @@ void left() {
 		system("cls");
 		ofstream file("C:/Windows/Temp/save.txt");
 		if (file.is_open()) {
-			file << "H5$4N84@fgQ}Pndu0E8}jmWfp{wO4YMcLWd";
+			file << "zpl*|k*cMerj#~|~7FB2}KKTxp5XTAxB@zMB";
 			file.close();
 			cout << "SAVE SUCCESSFUL" << endl << endl << endl;
 			nsave++;
@@ -4986,6 +4986,13 @@ void levels() {
 void main_menu() {
 	system("cls");
 	rnd = rand() % 100;
+	if (!cheat_get) {
+		ifstream cheat("C:/Windows/Temp/key.txt");
+		cheat >> cheat_unlock;
+		cheat.close();
+		if (cheat_unlock == "@|VJDOiAphuPIm~e~%DCLge$T0nqMeEYfC|X{~PZ")
+			cheat_get = true;
+	}
 	if (!travel_com) {
 		ifstream travel("C:/Windows/Temp/travel.txt");
 		travel >> travel_check;
@@ -4993,17 +5000,35 @@ void main_menu() {
 		if (travel_check == "O5Sq{NsF*5Go3~akOy51wT$R2{1W%LSIiAxk")
 			travel_com = true;
 	}
+	if (travel_com && !cheat_get && not_delete && achievements1 && achievements2 && achievements3 && achievements4 && achievements5 && achievements6 && achievements7 && achievements8 && achievements9 && achievements10) {
+		cheat_get = true;
+		if (Language)
+			cout << "Congratulations on getting all the achievements!\nAnd as a reward, I give you this code, enter it into the Console\n====386822====" << endl;
+		if (!Language)
+			cout << "Поздравляю с получением всех достижений!\nИ в качестве награды даю тебе этот код, введи его в Консоль\n====386822====" << endl;
+		Sleep(2000);
+		system("pause");
+		system("cls");
+	}
 	if (Language) {
 		if (!travel_com) {
 			travel_code_text = "               Enter “Traveler Code” 8";
 			cheat_panel = "\n";
 		}
+		if (!cheat_get1) {
+			open_cheat = "";
+			f1 = "\n";
+		}
+		if (cheat_get1) {
+			open_cheat = "                  Open base_cheat =\n";
+			f1 = "";
+		}
 		if (travel_com) {
 			travel_code_text = "                   Traveler Menu 8";
 			cheat_panel = "\n                    Cheat panel +\n";
 		}
-		cout << "                 Base_Escape_v3.8.1                 " << endl;
-		cout << "====================================================\n                     Main menu\n====================================================\n                       Start 1\n                     Load save 2\n                About the developers 3\n                  Русский/English 4\n              =========================\n                    Changes list 5\n                    Achievements 6\n              =========================\n                  Delete game data 7\n" << travel_code_text << cheat_panel << "                       Exit 0\n\n\n\n\n\n\n\n\n\n\n\n\n" << endl;
+		cout << "                 Base_Escape_v3.8.2                 " << endl;
+		cout << "====================================================\n                     Main menu\n====================================================\n                       Start 1\n                     Load save 2\n                About the developers 3\n                  Русский/English 4\n              =========================\n                    Changes list 5\n                    Achievements 6\n              =========================\n                  Delete game data 7\n" << travel_code_text << cheat_panel << open_cheat << "                       Exit 0" << f1 << "\n\n\n\n\n\n\n\n\n\n\n\n" << endl;
 		if (!travel_com)
 			cout << endl;
 		if (rnd == 4)
@@ -5014,12 +5039,20 @@ void main_menu() {
 			travel_code_text = "                Ввести “Код Путешественника” 8";
 			cheat_panel = "\n";
 		}
+		if (!cheat_get1) {
+			open_cheat = "";
+			f1 = "\n";
+		}
+		if (cheat_get1) {
+			open_cheat = "                     Открыть base_cheat =\n";
+			f1 = "";
+		}
 		if (travel_com) {
 			travel_code_text = "                    Меню путешественника 8";
 			cheat_panel = "\n                         Чит панель +\n";
 		}
-		cout << "                      Base_Escape_v3.8.1                 " << endl;
-		cout << "==============================================================\n                         Главное меню\n==============================================================\n                           Старт 1\n                   Загрузить сохранение 2\n                      О Разработчиках 3\n                      Русский/English 4\n              ==================================\n                      Список изменений 5\n                         Достижения 6\n              ==================================\n                   Удалить игровые данные 7\n" << travel_code_text << cheat_panel << "                           Выйти 0\n\n\n\n\n\n\n\n\n\n\n\n\n" << endl;
+		cout << "                      Base_Escape_v3.8.2                 " << endl;
+		cout << "==============================================================\n                         Главное меню\n==============================================================\n                           Старт 1\n                   Загрузить сохранение 2\n                      О Разработчиках 3\n                      Русский/English 4\n              ==================================\n                      Список изменений 5\n                         Достижения 6\n              ==================================\n                   Удалить игровые данные 7\n" << travel_code_text << cheat_panel << open_cheat << "                           Выйти 0" << f1 << "\n\n\n\n\n\n\n\n\n\n\n\n" << endl;
 		if (!travel_com)
 			cout << endl;
 		if (rnd == 4)
@@ -5099,11 +5132,24 @@ void main_menu() {
 				nhelp += 666;
 				ofstream file("C:/Windows/Temp/save.txt");
 				if (file.is_open()) {
-					file << "s9H7?o|oZ|ZtojACuw%v?w7iOF|r2YK~iavi";
+					file << "F?DAa5mlZ4okAANeT6QDaNBWib%5EzG@1yA{F?C?";
 					file.close();
 				}
 			}
+			if (im_furry_gay == "386822") {
+				cheat_get1 = true;
+				ofstream cheat("C:/Windows/Temp/key.txt");
+				cheat << "@|VJDOiAphuPIm~e~%DCLge$T0nqMeEYfC|X{~PZ";
+				cheat.close();
+			}
 		}
+		main_menu();
+		break;
+	case '=':
+		if(cheat_get1)
+			system("base_cheats_v1.3_x64.exe");
+		if(!cheat_get1)
+			main_menu();
 		main_menu();
 		break;
 	default:
@@ -5247,9 +5293,9 @@ void delte() {
 	int choice;
 	system("cls");
 	if (Language)
-		cout << "What data do you want to delete?\nSaves file 1\nAchievement files 2\nTraveler files 3\nAll data 4" << endl;
+		cout << "What data do you want to delete?\nSaves file 1\nAchievement files 2\nTraveler files 3\nAccess Files 4\nAll data 5" << endl;
 	if (!Language)
-		cout << "Какие данные вы хотите удалить?\nФайлы сохранения 1\nФайлы достижений 2\nФайлы путешественника 3\nВсе данные 4" << endl;
+		cout << "Какие данные вы хотите удалить?\nФайлы сохранения 1\nФайлы достижений 2\nФайлы путешественника 3\nФайлы доступа 4\nВсе данные 5" << endl;
 	switch (_getch()) {
 	case '1':
 		choice = 0;
@@ -5261,6 +5307,9 @@ void delte() {
 		choice = 2;
 		break;
 	case '4':
+		choice = 4;
+		break;
+	case '5':
 		choice = 3;
 		break;
 	default:
@@ -5283,7 +5332,7 @@ void delte() {
 		}
 		else
 			cout << endl << endl << endl << endl << endl << "	 OOOO   KK  KK\n	OO  OO  KK KK\n	OO  OO  KKKK\n	OO  OO  KK KK\n	 OOOO   KK  KK" << endl << endl << endl << endl << endl << endl << endl << endl;
-		system("pause");
+		Sleep(2000);
 		main_menu();
 	}
 	if (choice == 1) {
@@ -5306,7 +5355,7 @@ void delte() {
 		}
 		else
 			cout << endl << endl << endl << endl << endl << "	 OOOO   KK  KK\n	OO  OO  KK KK\n	OO  OO  KKKK\n	OO  OO  KK KK\n	 OOOO   KK  KK" << endl << endl << endl << endl << endl << endl << endl << endl;
-		system("pause");
+		Sleep(2000);
 		main_menu();
 	}
 	if (choice == 2) {
@@ -5328,7 +5377,7 @@ void delte() {
 		}
 		else
 			cout << endl << endl << endl << endl << endl << "	 OOOO   KK  KK\n	OO  OO  KK KK\n	OO  OO  KKKK\n	OO  OO  KK KK\n	 OOOO   KK  KK" << endl << endl << endl << endl << endl << endl << endl << endl;
-		system("pause");
+		Sleep(2000);
 		main_menu();
 	}
 	if (choice == 3) {
@@ -5353,16 +5402,45 @@ void delte() {
 					qsave[i] = 'f';
 			}
 			if (remove("C:/Windows/Temp/travel.txt") != 0)
-				cout << "		ERROR DELETE TRAVELER FILES" << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl;
+				cout << "		ERROR DELETE TRAVELER FILES" << endl;
 			else {
-				cout << "		TRAVELER FILES SUCCESSFULLY DELETED" << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl;
+				cout << "		TRAVELER FILES SUCCESSFULLY DELETED" << endl;
 				travel_com = false;
 				travel_check = "";
+			}
+			if (remove("C:/Windows/Temp/key.txt") != 0)
+				cout << "		ERROR DELETE ACCESS FILES" << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl;
+			else {
+				cout << "		ACCESS FILES SUCCESSFULLY DELETED" << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl;
+				cheat_get1 = false, cheat_get = false, not_delete = false;
+				cheat_unlock = "";
 			}
 		}
 		else
 			cout << endl << endl << endl << endl << endl << "	 OOOO   KK  KK\n	OO  OO  KK KK\n	OO  OO  KKKK\n	OO  OO  KK KK\n	 OOOO   KK  KK" << endl << endl << endl << endl << endl << endl << endl << endl;
-		system("pause");
+		Sleep(2000);
+		main_menu();
+	}
+	if (choice == 4) {
+		if (Language)
+			cout << "Are you sure you want to delete traveler files? yes/no" << endl;
+		if (!Language)
+			cout << "Вы уверены что хотите удалить файлы путешественника? yes/no" << endl;
+		cin >> files;
+		if (files == "Yes" || files == "yes" || files == "Delete" || files == "delete") {
+			cout << endl << endl << endl << "		DELETING...";
+			Sleep(1000);
+			if (remove("C:/Windows/Temp/key.txt") != 0)
+				cout << endl << endl << endl << "		ERROR DELETE ACCESS FILES" << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl;
+			else {
+				cout << endl << endl << endl << "		ACCESS FILES SUCCESSFULLY DELETED" << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl;
+				cheat_get1 = false, cheat_get = false, not_delete = false;
+				cheat_unlock = "";
+			}
+		}
+		else
+			cout << endl << endl << endl << endl << endl << "	 OOOO   KK  KK\n	OO  OO  KK KK\n	OO  OO  KKKK\n	OO  OO  KK KK\n	 OOOO   KK  KK" << endl << endl << endl << endl << endl << endl << endl << endl;
+		Sleep(2000);
 		main_menu();
 	}
 }
@@ -5392,7 +5470,7 @@ void save(int s) {
 	if (s == 1) {
 		ofstream file("C:/Windows/Temp/save.txt");
 		if (file.is_open()) {
-			file << "Fdcj*G2@~L~?j4Wb5NHw9$oG8lljs~";
+			file << "p25N}h|#E5kfIou|@~7cWcJ~G1vjU7~YJZ~|";
 			file.close();
 			cout << "SAVE SUCCESSFUL" << endl;
 			nsave++;
@@ -5404,7 +5482,7 @@ void save(int s) {
 	if (s == 2) {
 		ofstream file("C:/Windows/Temp/save.txt");
 		if (file.is_open()) {
-			file << "gc7k|DxbY~E#g~YW~S*7?aYE#TcYY0";
+			file << "Z6j8K8ijM{qk2*xXALSkm#0m{0bGllkmgWUL";
 			file.close();
 			cout << "SAVE SUCCESSFUL" << endl;
 			nsave++;
@@ -5416,7 +5494,7 @@ void save(int s) {
 	if (s == 3) {
 		ofstream file("C:/Windows/Temp/save.txt");
 		if (file.is_open()) {
-			file << "Ss9Hl9V7IR2KwlihlEYCa{}cHj~Eo~";
+			file << "69NqkR2F6A~1?nK}R}BhCoME4tzzWktNbIQQ";
 			file.close();
 			cout << "SAVE SUCCESSFUL" << endl;
 			nsave++;
@@ -5428,7 +5506,7 @@ void save(int s) {
 	if (s == 4) {
 		ofstream file("C:/Windows/Temp/save.txt");
 		if (file.is_open()) {
-			file << "ABtY{~U48s6tMhxHPvYd?GkV@y#W~v";
+			file << "qI$YqRaSn0dgLk?1LR4Ie#htuEl?k7GYe$a$";
 			file.close();
 			cout << "SAVE SUCCESSFUL" << endl;
 			nsave++;
@@ -5440,7 +5518,7 @@ void save(int s) {
 	if (s == 5) {
 		ofstream file("C:/Windows/Temp/save.txt");
 		if (file.is_open()) {
-			file << "hTao5on4gxvfe@N?yBHiUIR%s?WrUL";
+			file << "MM82WRzxFM88t2waqHiCHTuHiV?18kLyee6#";
 			file.close();
 			cout << "SAVE SUCCESSFUL" << endl;
 			nsave++;
