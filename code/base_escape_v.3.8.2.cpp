@@ -4765,14 +4765,12 @@ void endgame() {
 			cout << endl << endl << "		 GGGG    OOOO    OOOO   DDDDD     EEEEE  NN  NN  DDDDD   IIIIII  NN  NN   GGGG\n		GG      OO  OO  OO  OO  DD  DD    EE     NNN NN  DD  DD    II    NNN NN  GG\n		GG GGG  OO  OO  OO  OO  DD  DD    EEEE   NN NNN  DD  DD    II    NN NNN  GG GGG\n		GG  GG  OO  OO  OO  OO  DD  DD    EE     NN  NN  DD  DD    II    NN  NN  GG  GG\n		 GGGG    OOOO    OOOO   DDDDD     EEEEE  NN  NN  DDDDD   IIIIII  NN  GG   GGGG" << endl << endl;
 			system("pause");
 			system("cls");
-			cout << "Do you want to delete save files? yes/no" << endl;
 		}
 		if (!Language) {
 			cout << "___________________________________________\nВы поставили под дверь капкан и побежали в тоннель...\nГде-то на середине пути вы услышали громкий щелчок...а после и истошный крик...\nВы бежали ещё около 10 минут, когда наконец-то увидели свет...\nВы вышли из небольшой пещерки в центре леса...в дали виднелась деревня...\nКажется ваше 'путешествие' наконец закончилось..." << endl << endl;
 			cout << endl << endl << "		 GGGG    OOOO    OOOO   DDDDD     EEEEE  NN  NN  DDDDD   IIIIII  NN  NN   GGGG\n		GG      OO  OO  OO  OO  DD  DD    EE     NNN NN  DD  DD    II    NNN NN  GG\n		GG GGG  OO  OO  OO  OO  DD  DD    EEEE   NN NNN  DD  DD    II    NN NNN  GG GGG\n		GG  GG  OO  OO  OO  OO  DD  DD    EE     NN  NN  DD  DD    II    NN  NN  GG  GG\n		 GGGG    OOOO    OOOO   DDDDD     EEEEE  NN  NN  DDDDD   IIIIII  NN  GG   GGGG" << endl << endl;
 			system("pause");
 			system("cls");
-			cout << "Вы хотите удалить файлы сохранения? yes/no" << endl;
 		}
 	}
 	if (!good_ending) {
@@ -4781,24 +4779,13 @@ void endgame() {
 			cout << endl << endl << "		BBBBB    AAAA   DDDDD     EEEEE  NN  NN  DDDDD   IIIIII  NN  NN   GGGG\n		BB  BB  AA  AA  DD  DD    EE     NNN NN  DD  DD    II    NNN NN  GG\n		BBBBB   AAAAAA  DD  DD    EEEE   NN NNN  DD  DD    II    NN NNN  GG GGG\n		BB  BB  AA  AA  DD  DD    EE     NN  NN  DD  DD    II    NN  NN  GG  GG\n		BBBBB   AA  AA  DDDDD     EEEEE  NN  NN  DDDDD   IIIIII  NN  NN   GGGG" << endl << endl;
 			system("pause");
 			system("cls");
-			cout << "Do you want to delete save files? yes/no" << endl;
 		}
 		if (!Language) {
 			cout << "___________________________________________\nВы сразу же побежали в туннель и бежали из всех своих сил...\nНо где-то на середине пути вы почувствовали сильный удар сзади...а после упали и отрубились\nУвы, но выжить вам было не суждено..." << endl;
 			cout << endl << endl << "		BBBBB    AAAA   DDDDD     EEEEE  NN  NN  DDDDD   IIIIII  NN  NN   GGGG\n		BB  BB  AA  AA  DD  DD    EE     NNN NN  DD  DD    II    NNN NN  GG\n		BBBBB   AAAAAA  DD  DD    EEEE   NN NNN  DD  DD    II    NN NNN  GG GGG\n		BB  BB  AA  AA  DD  DD    EE     NN  NN  DD  DD    II    NN  NN  GG  GG\n		BBBBB   AA  AA  DDDDD     EEEEE  NN  NN  DDDDD   IIIIII  NN  NN   GGGG" << endl << endl;
 			system("pause");
 			system("cls");
-			cout << "Вы хотите удалить файлы сохранения? yes/no" << endl;
 		}
-	}
-	cin >> files;
-	if (files == "Yes" || files == "yes" || files == "Delete" || files == "delete") {
-		if (remove("C:/Windows/Temp/save.txt") != 0)
-			cout << endl << endl << endl << "ERROR DELETE SAVE FILE" << endl << endl << endl << endl;
-		else
-			cout << endl << endl << endl << "SAVE FILES SUCCESSFULLY DELETED" << endl << endl << endl << endl;
-		system("pause");
-		system("cls");
 	}
 	if (nmoves < 275 && !achievements5) {
 		if (Language)
@@ -4918,11 +4905,13 @@ void endgame() {
 	end_code = 999 + rand() % 10000;
 	if (Language) {
 		cout << "During this journey you died " << ndeath << " times" << endl << endl;
-		cout << "Your traveler code: “" << end_code << "”" << endl << endl;
+		if (!travel_com)
+			cout << "Your traveler code: “" << end_code << "”" << endl << endl;
 	}
 	if (!Language) {
 		cout << "Во время этого путешествия вы умерли " << ndeath << " раз" << endl;
-		cout << "Ваш код путешественника: “" << end_code << "”" << endl << endl;
+		if (!travel_com)
+			cout << "Ваш код путешественника: “" << end_code << "”" << endl << endl;
 	}
 	cout << endl << endl << "TTTTTT  HH  HH   AAAA   NN  NN  KK  KK   SSSS  \n  TT    HH  HH  AA  AA  NNN NN  KK KK   SS     \n  TT    HHHHHH  AAAAAA  NN NNN  KKKK     SSSS  \n  TT    HH  HH  AA  AA  NN  NN  KK KK       SS \n  TT    HH  HH  AA  AA  NN  NN  KK  KK   SSSS  " << endl << endl;
 	cout << "FFFFFF   OOOO   RRRRR     PPPPP   LL       AAAA   YY  YY  IIIIII  NN  NN   GGGG   !!!\nFF      OO  OO  RR  RR    PP  PP  LL      AA  AA   YYYY     II    NNN NN  GG      !!!\nFFFF    OO  OO  RRRRR     PPPPP   LL      AAAAAA    YY      II    NN NNN  GG GGG  !!!\nFF      OO  OO  RR  RR    PP      LL      AA  AA    YY      II    NN  NN  GG  GG\nFF       OOOO   RR  RR    PP      LLLLLL  AA  AA    YY    IIIIII  NN  NN   GGGG   !!!" << endl;
@@ -4991,7 +4980,7 @@ void main_menu() {
 		cheat >> cheat_unlock;
 		cheat.close();
 		if (cheat_unlock == "@|VJDOiAphuPIm~e~%DCLge$T0nqMeEYfC|X{~PZ")
-			cheat_get = true;
+			cheat_get = true, cheat_get1 = true;
 	}
 	if (!travel_com) {
 		ifstream travel("C:/Windows/Temp/travel.txt");
@@ -5031,6 +5020,8 @@ void main_menu() {
 		cout << "====================================================\n                     Main menu\n====================================================\n                       Start 1\n                     Load save 2\n                About the developers 3\n                  Русский/English 4\n              =========================\n                    Changes list 5\n                    Achievements 6\n              =========================\n                  Delete game data 7\n" << travel_code_text << cheat_panel << open_cheat << "                       Exit 0" << f1 << "\n\n\n\n\n\n\n\n\n\n\n\n" << endl;
 		if (!travel_com)
 			cout << endl;
+		if (rnd == 1 && travel_com)
+			cout << "Try to enter the code: “Snake”";
 		if (rnd == 4)
 			cout << "Cheat: 6 -> 3 -> 7 -> 5 -> 1/2";
 	}
@@ -5055,6 +5046,8 @@ void main_menu() {
 		cout << "==============================================================\n                         Главное меню\n==============================================================\n                           Старт 1\n                   Загрузить сохранение 2\n                      О Разработчиках 3\n                      Русский/English 4\n              ==================================\n                      Список изменений 5\n                         Достижения 6\n              ==================================\n                   Удалить игровые данные 7\n" << travel_code_text << cheat_panel << open_cheat << "                           Выйти 0" << f1 << "\n\n\n\n\n\n\n\n\n\n\n\n" << endl;
 		if (!travel_com)
 			cout << endl;
+		if (rnd == 1 && travel_com)
+			cout << "Попробуй ввести код: “Snake”";
 		if (rnd == 4)
 			cout << "Чит: 6 -> 3 -> 7 -> 5 -> 1/2";
 	}
@@ -5142,12 +5135,14 @@ void main_menu() {
 				cheat << "@|VJDOiAphuPIm~e~%DCLge$T0nqMeEYfC|X{~PZ";
 				cheat.close();
 			}
+			if (im_furry_gay == "Snake")
+				system("snake_game_v1.3_x64.exe");
 		}
 		main_menu();
 		break;
 	case '=':
 		if(cheat_get1)
-			system("base_cheats_v1.3_x32.exe");
+			system("base_cheats_v1.3_x64.exe");
 		if(!cheat_get1)
 			main_menu();
 		main_menu();
@@ -5191,7 +5186,7 @@ void soc_netw() {
 void updet_list() {
 	system("cls");
 	if (Language)
-		cout << "==========================================\n             List of changes:\n==========================================\n*Added the ability to remove certain items\n*Some visual changes\n*Now the “Traveler Code” needs to be entered only once\n*Changed the system for obtaining “Location Selection Mode”\n\n==========================================\n        Plans for future updates:\n==========================================\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n" << endl << endl << endl;
+		cout << "==========================================\n             List of changes:\n==========================================\n*Save system update\n*Security update\n*Addition of a reward for completing all achievements\n\n==========================================\n        Plans for future updates:\n==========================================\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n" << endl << endl << endl;
 	if (!Language)
 		cout << "==========================================\n            Список изменений:\n==========================================\n*Обновление системы сохранения\n*Обновление системы безопасности\n*Добавление награды за получение всех достижений\n\n==========================================\n        Планы на будущие обновления:\n==========================================\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n" << endl << endl << endl;
 	system("pause");
