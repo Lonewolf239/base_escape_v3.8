@@ -9,7 +9,7 @@ using namespace std;
 
 //основные настройки и достижения
 
-int ndeath = 0, nsave = 0, nmoves = 0, timr = 45; float x_pl = 0, infection_stage = 0, nhelp = 0, qhelp = 0, cheat = 0, rnd = 0, code = 0, end_code = 999 + rand() % 10000, travel_code;
+int ndeath = 0, nsave = 0, nmoves = 0, timr = 45; float x_pl = 0, infection_stage = 0, nhelp = 0, qhelp = 0, cheat = 0, rnd = 0, code = 0, end_code = 14281254782578923758, travel_code;
 bool achievements1 = false, achievements2 = false, achievements3 = false, achievements4 = false, achievements5 = false, achievements6 = false, achievements7 = false, achievements8 = false, achievements9 = false, achievements10 = false, somebody = false, gas_gas_gas = false, sans = false;
 bool Language = true, first_start = true, good_ending = false, firw = true, git = true, comp = false, bag_com = false, travel_com = false, cheat_get = false, cheat_get1 = false, not_delete = true;
 char qsave[] = { "ffffffffff" };
@@ -4974,7 +4974,7 @@ void levels() {
 //меню
 void main_menu() {
 	system("cls");
-	rnd = rand() % 100;
+	rnd = rand() % 101;
 	if (!cheat_get) {
 		ifstream cheat("C:/Windows/Temp/key.txt");
 		cheat >> cheat_unlock;
@@ -5016,14 +5016,16 @@ void main_menu() {
 			travel_code_text = "                   Traveler Menu 8";
 			cheat_panel = "\n                    Cheat panel +\n";
 		}
-		cout << "                 Base_Escape_v3.8.2                 " << endl;
+		cout << "                 Base_Escape_v3.8.3                 " << endl;
 		cout << "====================================================\n                     Main menu\n====================================================\n                       Start 1\n                     Load save 2\n                About the developers 3\n                  Русский/English 4\n              =========================\n                    Changes list 5\n                    Achievements 6\n              =========================\n                  Delete game data 7\n" << travel_code_text << cheat_panel << open_cheat << "                       Exit 0" << f1 << "\n\n\n\n\n\n\n\n\n\n\n\n" << endl;
 		if (!travel_com)
 			cout << endl;
-		if (rnd == 1 && travel_com)
+		if (rnd >= 50 && rnd <= 75 && travel_com)
 			cout << "Try to enter the code: “Snake”";
-		if (rnd == 4)
+		if (rnd <= 10)
 			cout << "Cheat: 6 -> 3 -> 7 -> 5 -> 1/2";
+		if (rnd >= 80 && travel_com)
+			cout << "Try to enter the code: “RPG_DEMO”";
 	}
 	if (!Language) {
 		if (!travel_com) {
@@ -5042,14 +5044,16 @@ void main_menu() {
 			travel_code_text = "                    Меню путешественника 8";
 			cheat_panel = "\n                         Чит панель +\n";
 		}
-		cout << "                      Base_Escape_v3.8.2                 " << endl;
+		cout << "                      Base_Escape_v3.8.3                 " << endl;
 		cout << "==============================================================\n                         Главное меню\n==============================================================\n                           Старт 1\n                   Загрузить сохранение 2\n                      О Разработчиках 3\n                      Русский/English 4\n              ==================================\n                      Список изменений 5\n                         Достижения 6\n              ==================================\n                   Удалить игровые данные 7\n" << travel_code_text << cheat_panel << open_cheat << "                           Выйти 0" << f1 << "\n\n\n\n\n\n\n\n\n\n\n\n" << endl;
 		if (!travel_com)
 			cout << endl;
-		if (rnd == 1 && travel_com)
+		if (rnd >=50 && rnd <= 75 && travel_com)
 			cout << "Попробуй ввести код: “Snake”";
-		if (rnd == 4)
+		if (rnd <= 10)
 			cout << "Чит: 6 -> 3 -> 7 -> 5 -> 1/2";
+		if (rnd >= 80 && travel_com)
+			cout << "Попробуй ввести код: “RPG_DEMO”";
 	}
 	switch (_getch()) {
 	case '1':
@@ -5137,6 +5141,8 @@ void main_menu() {
 			}
 			if (im_furry_gay == "Snake")
 				system("snake_game_v1.3_x64.exe");
+			if (im_furry_gay == "RPG_DEMO")
+				system("RPG_DEMO_x64.exe");
 		}
 		main_menu();
 		break;
@@ -5186,9 +5192,9 @@ void soc_netw() {
 void updet_list() {
 	system("cls");
 	if (Language)
-		cout << "==========================================\n             List of changes:\n==========================================\n*Save system update\n*Security update\n*Addition of a reward for completing all achievements\n\n==========================================\n        Plans for future updates:\n==========================================\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n" << endl << endl << endl;
+		cout << "==========================================\n             List of changes:\n==========================================\n*Splash chance increased\n*Added another secret code\n*Fixed some bugs\n\n==========================================\n        Plans for future updates:\n==========================================\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n" << endl << endl << endl;
 	if (!Language)
-		cout << "==========================================\n            Список изменений:\n==========================================\n*Обновление системы сохранения\n*Обновление системы безопасности\n*Добавление награды за получение всех достижений\n\n==========================================\n        Планы на будущие обновления:\n==========================================\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n" << endl << endl << endl;
+		cout << "==========================================\n            Список изменений:\n==========================================\n*Увеличена вероятность появления сплеша\n*Добавлен ещё один секретный код\n*Исправлены некоторые ошибки\n\n==========================================\n        Планы на будущие обновления:\n==========================================\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n" << endl << endl << endl;
 	system("pause");
 	main_menu();
 }
