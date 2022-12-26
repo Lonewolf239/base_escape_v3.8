@@ -11,8 +11,8 @@ using namespace std;
 
 int ndeath = 0, nsave = 0, nmoves = 0, timr = 45; float x_pl = 0, infection_stage = 0, nhelp = 0, qhelp = 0, cheat = 0, rnd = 0, code = 0, end_code = 14281254782578923758, travel_code;
 bool achievements1 = false, achievements2 = false, achievements3 = false, achievements4 = false, achievements5 = false, achievements6 = false, achievements7 = false, achievements8 = false, achievements9 = false, achievements10 = false, somebody = false, gas_gas_gas = false, sans = false;
-bool Language = true, first_start = true, good_ending = false, firw = true, git = true, comp = false, bag_com = false, travel_com = false, cheat_get = false, cheat_get1 = false, not_delete = true;
-char qsave[] = { "ffffffffff" };
+bool Language = true, first_start = true, error = false, good_ending = false, firw = true, git = true, comp = false, bag_com = false, travel_com = false, cheat_get = false, cheat_get1 = false, not_delete = true, need_upd = false;
+char qsave[] = { "0000000000" };
 //инвентарь часть 1
 bool isHasKnife = false, isHasKey1 = false, figt = true, isHasHammer = false, isHasValve = false, isHasPotatoes = false, pig_eat = false, windows_broke = false;
 //инвентарь часть 2
@@ -125,26 +125,46 @@ int main() {
 	if (achievements.is_open())
 		achievements >> qsave;
 	achievements.close();
-	if (qsave[0] == 't')
+	if (qsave[0] == '1')
 		achievements1 = true;
-	if (qsave[1] == 't')
+	else
+		achievements1 = false;
+	if (qsave[1] == '1')
 		achievements2 = true;
-	if (qsave[2] == 't')
+	else
+		achievements2 = false;
+	if (qsave[2] == '1')
 		achievements3 = true;
-	if (qsave[3] == 't')
+	else
+		achievements3 = false;
+	if (qsave[3] == '1')
 		achievements4 = true;
-	if (qsave[4] == 't')
+	else
+		achievements4 = false;
+	if (qsave[4] == '1')
 		achievements5 = true;
-	if (qsave[5] == 't')
+	else
+		achievements5 = false;
+	if (qsave[5] == '1')
 		achievements6 = true;
-	if (qsave[6] == 't')
+	else
+		achievements6 = false;
+	if (qsave[6] == '1')
 		achievements7 = true;
-	if (qsave[7] == 't')
+	else
+		achievements7 = false;
+	if (qsave[7] == '1')
 		achievements8 = true;
-	if (qsave[8] == 't')
+	else
+		achievements8 = false;
+	if (qsave[8] == '1')
 		achievements9 = true;
-	if (qsave[9] == 't')
+	else
+		achievements9 = false;
+	if (qsave[9] == '1')
 		achievements10 = true;
+	else
+		achievements10 = false;
 	setlocale(LC_CTYPE, "rus");
 	if (first_start) {
 		cout << "WW   WW  EEEEE  LL       CCCC    OOOO   MM   MM  EEEEE\nWW   WW  EE     LL      CC  CC  OO  OO  MMM MMM  EE\nWW W WW  EEEE   LL      CC      OO  OO  MM M MM  EEEE\nWWWWWWW  EE     LL      CC  CC  OO  OO  MM   NN  EE\n WW WW   EEEEE  LLLLLL   CCCC    OOOO   MM   MM  EEEEE" << endl << endl;
@@ -4878,25 +4898,25 @@ void endgame() {
 		system("cls");
 	}
 	if (achievements1)
-		qsave[0] = 't';
+		qsave[0] = '1';
 	if (achievements2)
-		qsave[1] = 't';
+		qsave[1] = '1';
 	if (achievements3)
-		qsave[2] = 't';
+		qsave[2] = '1';
 	if (achievements4)
-		qsave[3] = 't';
+		qsave[3] = '1';
 	if (achievements5)
-		qsave[4] = 't';
+		qsave[4] = '1';
 	if (achievements6)
-		qsave[5] = 't';
+		qsave[5] = '1';
 	if (achievements7)
-		qsave[6] = 't';
+		qsave[6] = '1';
 	if (achievements8)
-		qsave[7] = 't';
+		qsave[7] = '1';
 	if (achievements9)
-		qsave[8] = 't';
+		qsave[8] = '1';
 	if (achievements10)
-		qsave[9] = 't';
+		qsave[9] = '1';
 	ofstream achievements("C:/Windows/Temp/qsave.txt");
 	if (achievements.is_open()) {
 		achievements << qsave;
@@ -4973,8 +4993,125 @@ void levels() {
 }
 //меню
 void main_menu() {
+	ifstream achievement("C:/Windows/Temp/qsave.txt");
+	if (achievement.is_open())
+		achievement >> qsave;
+	achievement.close();
 	system("cls");
 	rnd = rand() % 101;
+	for (int i = 0; i < 10; i++) {
+		if (qsave[i] == '1' || qsave[i] == '0')
+			need_upd = false;
+		else if (qsave[i] == 't' || qsave[i] == 'f') {
+			need_upd = true;
+			break;
+		}
+		else {
+			error = true;
+			break;
+		}
+	}
+	if (error) {
+		cout << "CRITICAL ERROR 404!\nFILE CORRUPTED!\nDELETING...";
+		Sleep(1000 + rand() % 5000);
+		if (remove("C:/Windows/Temp/qsave.txt") != 0) {
+			cout << "\nCRITICAL ERROR x0000942!";
+			Sleep(1500);
+		}
+		else {
+			cout << "\nSUCCESS!\nRESTORING...";
+			for (int i = 0; i < 10; i++)
+				qsave[i] = '0';
+			if (achievements1)
+				qsave[0] = '1';
+			if (achievements2)
+				qsave[1] = '1';
+			if (achievements3)
+				qsave[2] = '1';
+			if (achievements4)
+				qsave[3] = '1';
+			if (achievements5)
+				qsave[4] = '1';
+			if (achievements6)
+				qsave[5] = '1';
+			if (achievements7)
+				qsave[6] = '1';
+			if (achievements8)
+				qsave[7] = '1';
+			if (achievements9)
+				qsave[8] = '1';
+			if (achievements10)
+				qsave[9] = '1';
+			ofstream achievements("C:/Windows/Temp/qsave.txt");
+			if (achievements.is_open()) {
+				achievements << qsave;
+				achievements.close();
+			}
+			Sleep(1000 + rand() % 5000);
+			cout << "\nDONE!";
+			Sleep(1500);
+		}
+		system("cls");
+		error = false;
+	}
+	if (need_upd) {
+		cout << "YOUR DATA IS OLD FORMAT...\nTHEY ARE NO LONGER COMPATIBLE...\nUPDATING...";
+		for (int i = 0; i < 10; i++) {
+			if (qsave[i] == 't')
+				qsave[i] = '1';
+			if (qsave[i] == 'f')
+				qsave[i] = '0';
+			ofstream achievements("C:/Windows/Temp/qsave.txt");
+			if (achievements.is_open()) {
+				achievements << qsave;
+				achievements.close();
+			}
+		}
+		if (qsave[0] == '1')
+			achievements1 = true;
+		else
+			achievements1 = false;
+		if (qsave[1] == '1')
+			achievements2 = true;
+		else
+			achievements2 = false;
+		if (qsave[2] == '1')
+			achievements3 = true;
+		else
+			achievements3 = false;
+		if (qsave[3] == '1')
+			achievements4 = true;
+		else
+			achievements4 = false;
+		if (qsave[4] == '1')
+			achievements5 = true;
+		else
+			achievements5 = false;
+		if (qsave[5] == '1')
+			achievements6 = true;
+		else
+			achievements6 = false;
+		if (qsave[6] == '1')
+			achievements7 = true;
+		else
+			achievements7 = false;
+		if (qsave[7] == '1')
+			achievements8 = true;
+		else
+			achievements8 = false;
+		if (qsave[8] == '1')
+			achievements9 = true;
+		else
+			achievements9 = false;
+		if (qsave[9] == '1')
+			achievements10 = true;
+		else
+			achievements10 = false;
+		Sleep(1000 + rand() % 5000);
+		cout << "\nDONE!";
+		Sleep(1500);
+		system("cls");
+	}
 	if (!cheat_get) {
 		ifstream cheat("C:/Windows/Temp/key.txt");
 		cheat >> cheat_unlock;
@@ -5016,7 +5153,7 @@ void main_menu() {
 			travel_code_text = "                   Traveler Menu 8";
 			cheat_panel = "\n                    Cheat panel +\n";
 		}
-		cout << "                 Base_Escape_v3.8.3                 " << endl;
+		cout << "                 Base_Escape_v3.8.4                 " << endl;
 		cout << "====================================================\n                     Main menu\n====================================================\n                       Start 1\n                     Load save 2\n                About the developers 3\n                  Русский/English 4\n              =========================\n                    Changes list 5\n                    Achievements 6\n              =========================\n                  Delete game data 7\n" << travel_code_text << cheat_panel << open_cheat << "                       Exit 0" << f1 << "\n\n\n\n\n\n\n\n\n\n\n\n" << endl;
 		if (!travel_com)
 			cout << endl;
@@ -5044,7 +5181,7 @@ void main_menu() {
 			travel_code_text = "                    Меню путешественника 8";
 			cheat_panel = "\n                         Чит панель +\n";
 		}
-		cout << "                      Base_Escape_v3.8.3                 " << endl;
+		cout << "                      Base_Escape_v3.8.4                 " << endl;
 		cout << "==============================================================\n                         Главное меню\n==============================================================\n                           Старт 1\n                   Загрузить сохранение 2\n                      О Разработчиках 3\n                      Русский/English 4\n              ==================================\n                      Список изменений 5\n                         Достижения 6\n              ==================================\n                   Удалить игровые данные 7\n" << travel_code_text << cheat_panel << open_cheat << "                           Выйти 0" << f1 << "\n\n\n\n\n\n\n\n\n\n\n\n" << endl;
 		if (!travel_com)
 			cout << endl;
@@ -5140,15 +5277,15 @@ void main_menu() {
 				cheat.close();
 			}
 			if (im_furry_gay == "Snake")
-				system("snake_game_v1.3_x64.exe");
+				system("snake_game_v1.3_x32.exe");
 			if (im_furry_gay == "RPG_DEMO")
-				system("RPG_DEMO_x64.exe");
+				system("RPG_DEMO_x32.exe");
 		}
 		main_menu();
 		break;
 	case '=':
 		if(cheat_get1)
-			system("base_cheats_v1.3_x64.exe");
+			system("base_cheats_v1.4_x32.exe");
 		if(!cheat_get1)
 			main_menu();
 		main_menu();
@@ -5192,9 +5329,9 @@ void soc_netw() {
 void updet_list() {
 	system("cls");
 	if (Language)
-		cout << "==========================================\n             List of changes:\n==========================================\n*Splash chance increased\n*Added another secret code\n*Fixed some bugs\n\n==========================================\n        Plans for future updates:\n==========================================\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n" << endl << endl << endl;
+		cout << "==========================================\n             List of changes:\n==========================================\n*Minor visual updates\n*File system fixes\n*Achievement system update\n\n==========================================\n        Plans for future updates:\n==========================================\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n" << endl << endl << endl;
 	if (!Language)
-		cout << "==========================================\n            Список изменений:\n==========================================\n*Увеличена вероятность появления сплеша\n*Добавлен ещё один секретный код\n*Исправлены некоторые ошибки\n\n==========================================\n        Планы на будущие обновления:\n==========================================\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n" << endl << endl << endl;
+		cout << "==========================================\n            Список изменений:\n==========================================\n*Незначительные визуальные обновления\n*Исправления файловой системы\n*Обновление системы достижений\n\n==========================================\n        Планы на будущие обновления:\n==========================================\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n" << endl << endl << endl;
 	system("pause");
 	main_menu();
 }
@@ -5205,26 +5342,46 @@ void achievements() {
 	if (achievements.is_open())
 		achievements >> qsave;
 	achievements.close();
-	if (qsave[0] == 't')
+	if (qsave[0] == '1')
 		achievements1 = true;
-	if (qsave[1] == 't')
+	else
+		achievements1 = false;
+	if (qsave[1] == '1')
 		achievements2 = true;
-	if (qsave[2] == 't')
+	else
+		achievements2 = false;
+	if (qsave[2] == '1')
 		achievements3 = true;
-	if (qsave[3] == 't')
+	else
+		achievements3 = false;
+	if (qsave[3] == '1')
 		achievements4 = true;
-	if (qsave[4] == 't')
+	else
+		achievements4 = false;
+	if (qsave[4] == '1')
 		achievements5 = true;
-	if (qsave[5] == 't')
+	else
+		achievements5 = false;
+	if (qsave[5] == '1')
 		achievements6 = true;
-	if (qsave[6] == 't')
+	else
+		achievements6 = false;
+	if (qsave[6] == '1')
 		achievements7 = true;
-	if (qsave[7] == 't')
+	else
+		achievements7 = false;
+	if (qsave[7] == '1')
 		achievements8 = true;
-	if (qsave[8] == 't')
+	else
+		achievements8 = false;
+	if (qsave[8] == '1')
 		achievements9 = true;
-	if (qsave[9] == 't')
+	else
+		achievements9 = false;
+	if (qsave[9] == '1')
 		achievements10 = true;
+	else
+		achievements10 = false;
 	if (firw) {
 		if (Language)
 			cout << "		         ===================\n		         |     Warning     |\n		         ===================\n=======================================================================\nAchievements are counted only after the complete completion of the game\n=======================================================================\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n" << endl << endl << endl;
@@ -5294,9 +5451,9 @@ void delte() {
 	int choice;
 	system("cls");
 	if (Language)
-		cout << "What data do you want to delete?\nSaves file 1\nAchievement files 2\nTraveler files 3\nAccess Files 4\nAll data 5" << endl;
+		cout << "What data do you want to delete?\n================================\n          Saves file 1\n       Achievement files 2\n        Traveler files 3\n         Access Files 4\n           All data 5\n================================\n             Exit 0\n================================\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n" << endl;
 	if (!Language)
-		cout << "Какие данные вы хотите удалить?\nФайлы сохранения 1\nФайлы достижений 2\nФайлы путешественника 3\nФайлы доступа 4\nВсе данные 5" << endl;
+		cout << "Какие данные вы хотите удалить?\n===============================\n       Файлы сохранения 1\n       Файлы достижений 2\n     Файлы путешественника 3\n         Файлы доступа 4\n          Все данные 5\n===============================\n            Выйти 0\n===============================\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n" << endl;
 	switch (_getch()) {
 	case '1':
 		choice = 0;
@@ -5312,6 +5469,9 @@ void delte() {
 		break;
 	case '5':
 		choice = 3;
+		break;
+	case '0':
+		main_menu();
 		break;
 	default:
 		delte();
@@ -5333,7 +5493,7 @@ void delte() {
 		}
 		else
 			cout << endl << endl << endl << endl << endl << "	 OOOO   KK  KK\n	OO  OO  KK KK\n	OO  OO  KKKK\n	OO  OO  KK KK\n	 OOOO   KK  KK" << endl << endl << endl << endl << endl << endl << endl << endl;
-		Sleep(2000);
+		Sleep(1500);
 		main_menu();
 	}
 	if (choice == 1) {
@@ -5351,12 +5511,12 @@ void delte() {
 				cout << endl << endl << endl << "		ACHIEVEMENTS FILES SUCCESSFULLY DELETED" << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl << endl;
 				achievements1 = false, achievements2 = false, achievements3 = false, achievements4 = false, achievements5 = false, achievements6 = false, achievements7 = false, achievements8 = false, achievements9 = false, achievements10 = false;
 				for (int i = 0; i < 10; i++)
-					qsave[i] = 'f';
+					qsave[i] = '0';
 			}
 		}
 		else
 			cout << endl << endl << endl << endl << endl << "	 OOOO   KK  KK\n	OO  OO  KK KK\n	OO  OO  KKKK\n	OO  OO  KK KK\n	 OOOO   KK  KK" << endl << endl << endl << endl << endl << endl << endl << endl;
-		Sleep(2000);
+		Sleep(1500);
 		main_menu();
 	}
 	if (choice == 2) {
@@ -5378,7 +5538,7 @@ void delte() {
 		}
 		else
 			cout << endl << endl << endl << endl << endl << "	 OOOO   KK  KK\n	OO  OO  KK KK\n	OO  OO  KKKK\n	OO  OO  KK KK\n	 OOOO   KK  KK" << endl << endl << endl << endl << endl << endl << endl << endl;
-		Sleep(2000);
+		Sleep(1500);
 		main_menu();
 	}
 	if (choice == 3) {
@@ -5400,7 +5560,7 @@ void delte() {
 				cout << "		ACHIEVEMENTS FILES SUCCESSFULLY DELETED" << endl;
 				achievements1 = false, achievements2 = false, achievements3 = false, achievements4 = false, achievements5 = false, achievements6 = false, achievements7 = false, achievements8 = false, achievements9 = false, achievements10 = false;
 				for (int i = 0; i < 10; i++)
-					qsave[i] = 'f';
+					qsave[i] = '0';
 			}
 			if (remove("C:/Windows/Temp/travel.txt") != 0)
 				cout << "		ERROR DELETE TRAVELER FILES" << endl;
@@ -5419,7 +5579,7 @@ void delte() {
 		}
 		else
 			cout << endl << endl << endl << endl << endl << "	 OOOO   KK  KK\n	OO  OO  KK KK\n	OO  OO  KKKK\n	OO  OO  KK KK\n	 OOOO   KK  KK" << endl << endl << endl << endl << endl << endl << endl << endl;
-		Sleep(2000);
+		Sleep(1500);
 		main_menu();
 	}
 	if (choice == 4) {
@@ -5441,7 +5601,7 @@ void delte() {
 		}
 		else
 			cout << endl << endl << endl << endl << endl << "	 OOOO   KK  KK\n	OO  OO  KK KK\n	OO  OO  KKKK\n	OO  OO  KK KK\n	 OOOO   KK  KK" << endl << endl << endl << endl << endl << endl << endl << endl;
-		Sleep(2000);
+		Sleep(1500);
 		main_menu();
 	}
 }
