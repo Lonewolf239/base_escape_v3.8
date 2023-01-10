@@ -4998,6 +4998,9 @@ void main_menu() {
 		achievement >> qsave;
 	achievement.close();
 	system("cls");
+	int shrek = 0 + rand() % 21474;
+	if (shrek == 3063)
+		shrek_dancing();
 	rnd = rand() % 101;
 	for (int i = 0; i < 10; i++) {
 		if (qsave[i] == '1' || qsave[i] == '0')
@@ -5277,15 +5280,15 @@ void main_menu() {
 				cheat.close();
 			}
 			if (im_furry_gay == "Snake")
-				system("snake_game_v1.3_x32.exe");
+				system("snake_game_v1.3_x64.exe");
 			if (im_furry_gay == "RPG_DEMO")
-				system("RPG_DEMO_x32.exe");
+				system("RPG_DEMO_x64.exe");
 		}
 		main_menu();
 		break;
 	case '=':
 		if(cheat_get1)
-			system("base_cheats_v1.4_x32.exe");
+			system("base_cheats_v1.4_x64.exe");
 		if(!cheat_get1)
 			main_menu();
 		main_menu();
@@ -5623,6 +5626,13 @@ void trave1_code() {
 	default:
 		trave1_code();
 	}
+}
+void shrek_dancing() {
+	system("cls");
+	cout << "Shrek_Dancing" << endl;
+	system("explorer https://youtu.be/OlqMj5cm7zk");
+	system("pause");
+	exit(0);
 }
 
 //сейв
